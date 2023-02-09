@@ -49,16 +49,21 @@ const Template: StoryFn<typeof DescriboCrateBuilder> = (args) => <DescriboCrateB
 export const Simple = Template.bind({});
 Simple.args = {
   crate: crateTestData,
+  onReady: () => console.log('onReady called'),
+  onSaveCrate: (crate) => console.log('onSaveCrate called', crate)
 }
 
 export const Blank = Template.bind({});
 Blank.args = {
-  crate: crateFile1
+  crate: crateFile1,
+  enableCratePreview: false,
+  onReady: () => console.log('onReady called')
 }
 
 export const ComplexCollection = Template.bind({});
 ComplexCollection.args = {
-  crate: crateFile2
+  crate: crateFile2,
+  enableCratePreview: true,
 }
 
 export const ComplexItem = Template.bind({});
@@ -69,43 +74,4 @@ ComplexItem.args = {
 export const LargeCrate = Template.bind({});
 LargeCrate.args = {
   crate: crateFile4
-}
-
-
-
-
-// Reuse that template for creating different stories
-// export const Primary = Template.bind({});
-// Primary.args = { label: "Primary 😃", size: "large", type: "primary", onClick:(() => alert('primary clicked'))};
-//
-// export const Secondary = Template.bind({});
-// Secondary.args = { ...Primary.args, type: "secondary", label: "Secondary 😇", onClick:(() => alert('secondary clicked')) };
-
-
-const testCrate1 = {
-  "@context": "https://w3id.org/ro/crate/1.1/context",
-  "@graph": [
-    {
-      "@type": "CreativeWork",
-      "@id": "ro-crate-metadata.json",
-      "conformsTo": {"@id": "https://w3id.org/ro/crate/1.1"},
-      "about": {"@id": "./"}
-    },
-    {
-      "@id": "./",
-      "identifier": "https://doi.org/10.4225/59/59672c09f4a4b",
-      "@type": "Dataset",
-      "datePublished": "2017",
-      "name": "Data files associated with the manuscript:Effects of facilitated family case conferencing for ...",
-      "description": "Palliative care planning for nursing home residents with advanced dementia ...",
-      "license": {"@id": "https://creativecommons.org/licenses/by-nc-sa/3.0/au/"}
-    },
-    {
-      "@id": "https://creativecommons.org/licenses/by-nc-sa/3.0/au/",
-      "@type": "CreativeWork",
-      "description": "This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Australia License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/au/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.",
-      "identifier": "https://creativecommons.org/licenses/by-nc-sa/3.0/au/",
-      "name": "Attribution-NonCommercial-ShareAlike 3.0 Australia (CC BY-NC-SA 3.0 AU)"
-    }
-  ]
 }
