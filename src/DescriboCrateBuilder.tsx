@@ -87,9 +87,6 @@ function toDescriboConfig(props: DescriboCrateBuilderProps) {
   }
 }
 
-
-globalThis.DescriboCrateBuilderConfiguration = {} as DescriboConfig
-
 export default function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
   const [configName, _] = useState("DescriboCrateBuilderConfiguration"+"_"+btoa(Math.random().toString()).substring(10,15))
   const [configVersion, setConfigVersion] = useState(1)

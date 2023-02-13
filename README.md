@@ -16,6 +16,47 @@ yarn add @describo/crate-builder-component-react
 
 # Usage
 
+```tsx
+import React, {useState} from 'react';
+import {DescriboCrateBuilder} from "@describo/crate-builder-component-react";
+import {JSONObject} from "@describo/crate-builder-component-react/lib/DescriboCrateBuilder";
+
+const exampleCrate = {
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "@id": "ro-crate-metadata.json",
+      "conformsTo": {"@id": "https://w3id.org/ro/crate/1.1"},
+      "about": {"@id": "./"}
+    },
+    {
+      "@id": "./",
+      "identifier": "https://doi.org/10.4225/59/11111111",
+      "@type": "Dataset",
+      "datePublished": "2017",
+      "name": "Dataset name",
+      "description": "Dataset description",
+    }
+  ]
+}
+
+function App() {
+  const [crate, setCrate] = useState<JSONObject>(exampleCrate)
+  return (
+    <>
+      <DescriboCrateBuilder crate={exampleCrate} onSaveCrate={(updatedCrate) => setCrate(updatedCrate)} />
+      <pre>
+        {JSON.stringify(crate, null, 2)}
+      </pre>
+    </>
+  );
+}
+
+export default App;
+```
+
+_Note: in the example above we set the inital value of the crate from `exampleCrate` and not `crate` so that we don't update the Vue component's crate vaue whenever onSaveCrate() is called, which will cause reloading of teh component and will result in flickering._
 
 # Testing
 
