@@ -1,8 +1,8 @@
 import React from "react";
 import {Meta, StoryFn} from "@storybook/react";
-import CustomMDXDocumentation from './Custom-MDX-Documentation.mdx';
+import CustomMDXDocumentation from './Documentation.mdx';
 import DescriboCrateBuilder from "../DescriboCrateBuilder";
-import crateTestData from "./ro-crate-metadata.json"
+import crateTestData from "./examples/simple-ro-crate-metadata.json"
 import crateFile1 from "./examples/item/empty/ro-crate-metadata.json";
 import crateFile2 from "./examples/item/complex-collection/ro-crate-metadata.json";
 import crateFile3 from "./examples/item/complex-item/ro-crate-metadata.json";
@@ -75,3 +75,10 @@ export const LargeCrate = Template.bind({});
 LargeCrate.args = {
   crate: crateFile4
 }
+
+export const Readonly = Template.bind({});
+Readonly.args = {
+  crate: crateFile2,
+  readonly: true
+}
+

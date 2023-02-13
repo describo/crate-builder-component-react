@@ -1,7 +1,9 @@
 {
-  "name": "crate-builder-component-react",
-  "version": "1.0.0",
+  "name": "@describo/crate-builder-component-react",
+  "version": "0.1.0",
   "description": "Describo Crate Builder in React",
+  "author": "Balazs E. Pataki",
+  "license": "GPL-3.0",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -22,8 +24,6 @@
     "react",
     "typescript"
   ],
-  "author": "Balazs E. Pataki",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.20.2",
@@ -57,6 +57,6 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "classnames": "^2.3.2"
+    "@describo/crate-builder-component": "^0.22.0"
   }
 }

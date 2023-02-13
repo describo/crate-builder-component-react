@@ -1,4 +1,0 @@
-/* We have to load the same font-awesome lib used by the describo-crate-builder component otherwise
- *   icons won't appear. Since this will be already loaded, it will load from cache, so no overhead really
- */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
