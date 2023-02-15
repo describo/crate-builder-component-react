@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Describo Crate Builder in React",
   "author": "Balazs E. Pataki",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
