@@ -15,6 +15,11 @@
     "build": "rollup -c",
     "prepublishOnly": "yarn build"
   },
+  "files": [
+    "lib/**",
+    "src/DescriboCrateBuilder.tsx",
+    "src/index.ts"
+  ],
   "np": {
     "publish": false,
     "tests": false
