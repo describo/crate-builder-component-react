@@ -4,13 +4,6 @@ import "@describo/crate-builder-component/dist/web-component/describo-crate-buil
 // https://github.com/vuejs/core/issues/4662
 import "@describo/crate-builder-component/dist/web-component/style.css"
 
-type DescriboConfig = ReturnType<typeof toDescriboConfig>
-
-// type for globalThis.DescriboCrateBuilderConfiguration
-declare global {
-  var DescriboCrateBuilderConfiguration: DescriboConfig
-}
-
 export interface JSONObject {
   [key: string]: any;
 }
