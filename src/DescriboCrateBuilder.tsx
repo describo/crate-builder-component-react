@@ -91,37 +91,44 @@ export default function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
     globalThis[configName] = {}
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const { current }: any = ref
 
-    current?.addEventListener("save:crate", (event: Event ) => {
-        const customEvent = event as CustomEvent
-        const crate = customEvent?.detail[0]?.crate
-        props.onSaveCrate?.(crate)
-      }
-    )
+    const saveCrateEventHandler = (event: Event ) => {
+      const customEvent = event as CustomEvent
+      const crate = customEvent?.detail[0]?.crate
+      props.onSaveCrate?.(crate)
+    }
+    current?.addEventListener("save:crate", saveCrateEventHandler)
 
-    current?.addEventListener("save:crate:template", (event: Event ) => {
-        const customEvent = event as CustomEvent;
-        const template = customEvent?.detail[0]?.template
-        props.onSaveCrateAsTemmplate?.(template.name, template.crate)
-      }
-    )
+    const saveCrateTemplateEventHandler = (event: Event ) => {
+      const customEvent = event as CustomEvent;
+      const template = customEvent?.detail[0]?.template
+      props.onSaveCrateAsTemmplate?.(template.name, template.crate)
+    }
+    current?.addEventListener("save:crate:template", saveCrateTemplateEventHandler)
 
-    current?.addEventListener("ready", (event: Event ) => {
-        const customEvent = event as CustomEvent;
-        props.onReady?.()
-      }
-    )
+    const readyEventListener = (event: Event ) => {
+      const customEvent = event as CustomEvent;
+      props.onReady?.()
+    }
+    current?.addEventListener("ready", readyEventListener)
 
-    current?.addEventListener("error", (event: Event ) => {
-        const customEvent = event as CustomEvent;
-        const message = customEvent?.detail[0]
-        props.onError?.(message)
-      }
-    )
+    const errorEventListener = (event: Event ) => {
+      const customEvent = event as CustomEvent;
+      const message = customEvent?.detail[0]
+      props.onError?.(message)
+    }
+    current?.addEventListener("error", errorEventListener)
 
-  }, [ref]);
+    return () => {
+      current?.removeEventListener("save:crate", saveCrateEventHandler)
+      current?.removeEventListener("save:crate:template", saveCrateTemplateEventHandler)
+      current?.removeEventListener("ready", readyEventListener)
+      current?.removeEventListener("error", errorEventListener)
+    }
+
+  }, [ref, props.onSaveCrate, props.onSaveCrateAsTemmplate, props.onReady, props.onError]);
 
   // Update globalThis.DescriboCrateBuilderConfiguration
   useEffect(() => {
