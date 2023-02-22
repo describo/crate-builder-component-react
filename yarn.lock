@@ -1222,10 +1222,10 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.5.0.tgz#6e52b3d1c38d13130101771821e09cdd414a16bc"
   integrity sha512-tlJpwF40DEQcfR/QF+wNMVyGMaO9FQp6Z1Wahj4Gk3CJQYHwA2xVG7iKDFdW6zuxZY9XWOpGcfNCTsX4McOsOg==
 
-"@describo/crate-builder-component@^0.22.0":
-  version "0.22.0"
-  resolved "https://registry.yarnpkg.com/@describo/crate-builder-component/-/crate-builder-component-0.22.0.tgz#326f09354b8bfb7e6201f8d17e7e9a0605f7c8b6"
-  integrity sha512-ETd14pgDdrzfVAbSund8wcxTXr5V/1tCAM3MwV7l+L96TgywPvrI8TjQDNqBQd3uzg4FcjwuDaojI4ggZ9bjOA==
+"@describo/crate-builder-component@^0.23.1":
+  version "0.23.1"
+  resolved "https://registry.yarnpkg.com/@describo/crate-builder-component/-/crate-builder-component-0.23.1.tgz#0d78df1a646d0f7f7fc8ac4462a8eabcceacb29a"
+  integrity sha512-1DZqozk/HALq+RJZjMTe25MTTsXlxp4F9vkkG2JNK/hghKJb1klWRK3RBNIarm2El3bS1EQoyznHD3MSCAwz2g==
   dependencies:
     "@codemirror/lang-javascript" "^6.1.2"
     "@codemirror/state" "^6.2.0"
@@ -1243,7 +1243,7 @@
     lodash "^4.17.21"
     tailwindcss "^3.2.4"
     uuid "^9.0.0"
-    validator "^13.7.0"
+    validator "^13.9.0"
     vue "^3.2.45"
     vue-router "^4.1.6"
     vuex "^4.1.0"
@@ -8914,7 +8914,7 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-validator@^13.7.0:
+validator@^13.9.0:
   version "13.9.0"
   resolved "https://registry.yarnpkg.com/validator/-/validator-13.9.0.tgz#33e7b85b604f3bbce9bb1a05d5c3e22e1c2ff855"
   integrity sha512-B+dGG8U3fdtM0/aNK4/X8CXq/EcxU2WPrPEkJGslb47qyHsxmbggTWK0yEA4qnYVNF+nxNlN88o14hIcPmSIEA==
