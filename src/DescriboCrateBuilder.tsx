@@ -1,5 +1,5 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
-import "@describo/crate-builder-component/dist/web-component/describo-crate-builder-wc.mjs"
+import "@describo/crate-builder-component/dist/web-component/describo-crate-builder-wc.js"
 // We should not need it, but we do. Without this the AutoComplete's popup won't have a style.
 // https://github.com/vuejs/core/issues/4662
 import "@describo/crate-builder-component/dist/web-component/style.css"
@@ -63,6 +63,10 @@ export type DescriboCrateBuilderProps = {
   // also pass a Lookup object with entityTemplates so that the saved templates can be looked up reused in the
   // component.
   onSaveCrateAsTemmplate?: (name: string, crate: JSONObject) => void
+
+  // Callback when crate builder navigates to a context entity
+  onNavigation?: (navigationId: string, entityId: string) => void
+
 }
 
 function toDescriboConfig(props: DescriboCrateBuilderProps) {
@@ -76,6 +80,7 @@ function toDescriboConfig(props: DescriboCrateBuilderProps) {
       enableBrowseEntities: props.enableBrowseEntities,
       enableTemplateSave: props.enableTemplateSave,
       readonly: props.readonly,
+      enableInternalRouting: false
     }
   }
 }
@@ -121,14 +126,23 @@ export default function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
     }
     current?.addEventListener("error", errorEventListener)
 
+    const navigationEventHandler = (event: Event ) => {
+      const customEvent = event as CustomEvent;
+      const args = customEvent?.detail[0]
+      props.onNavigation?.(args.id, args["@id"])
+    }
+    current?.addEventListener("navigation", navigationEventHandler)
+
+
     return () => {
       current?.removeEventListener("save:crate", saveCrateEventHandler)
       current?.removeEventListener("save:crate:template", saveCrateTemplateEventHandler)
       current?.removeEventListener("ready", readyEventListener)
       current?.removeEventListener("error", errorEventListener)
+      current?.removeEventListener("navigation", navigationEventHandler)
     }
 
-  }, [ref, props.onSaveCrate, props.onSaveCrateAsTemmplate, props.onReady, props.onError]);
+  }, [ref, props.onSaveCrate, props.onSaveCrateAsTemmplate, props.onReady, props.onError, props.onNavigation]);
 
   // Update globalThis.DescriboCrateBuilderConfiguration
   useEffect(() => {
