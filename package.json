@@ -48,6 +48,7 @@
     "postcss": "^8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "relative-deps": "^1.0.7",
     "rollup": "^2.34.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
@@ -63,5 +64,8 @@
   },
   "dependencies": {
     "@describo/crate-builder-component": "^0.25.2"
+  },
+  "relativeDependencies": {
+    "@describo/crate-builder-component": "../crate-builder-component"
   }
 }

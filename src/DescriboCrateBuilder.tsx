@@ -31,6 +31,9 @@ export type DescriboCrateBuilderProps = {
   // Profile to use when editing the crate
   profile?: JSONObject,
 
+  // Id of selected entity
+  entityId?: string,
+
   // Callbacks for crate related lookups
   lookup?: Lookup,
   // mode?: "embedded" | "online",
@@ -74,6 +77,7 @@ function toDescriboConfig(props: DescriboCrateBuilderProps) {
     crate: props.crate,
     profile: props.profile,
     lookup: props.lookup,
+    entityId: props.entityId,
     config: {
       enableContextEditor: props.enableContextEditor,
       enableCratePreview: props.enableCratePreview,
@@ -150,7 +154,7 @@ export default function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
     globalThis[configName] = toDescriboConfig(props)
     // Need to update configVersion to inform the vue component about the change
     setConfigVersion(configVersion+1)
-  }, [props.crate, props.profile, props.enableBrowseEntities, props.enableCratePreview, props.enableContextEditor, props.enableTemplateSave])
+  }, [props.crate, props.profile, props.entityId, props.enableBrowseEntities, props.enableCratePreview, props.enableContextEditor, props.enableTemplateSave])
 
   return(
     <>
