@@ -1234,10 +1234,10 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.5.0.tgz#6e52b3d1c38d13130101771821e09cdd414a16bc"
   integrity sha512-tlJpwF40DEQcfR/QF+wNMVyGMaO9FQp6Z1Wahj4Gk3CJQYHwA2xVG7iKDFdW6zuxZY9XWOpGcfNCTsX4McOsOg==
 
-"@describo/crate-builder-component@^0.25.2":
-  version "0.25.2"
-  resolved "https://registry.yarnpkg.com/@describo/crate-builder-component/-/crate-builder-component-0.25.2.tgz#cf34c8adc99df52d65a625663a8959f61dbda92f"
-  integrity sha512-qXwfOzSTwMlik6MVkc3MbOpAIXumpcX/SpHAy3Oo3eGHOfRxTIABQHloTlxzKKqf4FsbR17FCypL0xRd8OzZjw==
+"@describo/crate-builder-component@^0.25.3":
+  version "0.25.3"
+  resolved "https://registry.yarnpkg.com/@describo/crate-builder-component/-/crate-builder-component-0.25.3.tgz#ea69c3b9937477ff2bcc3947c54d77a042a06ac0"
+  integrity sha512-LMA1QcwSVqAIy77NNP2SkymI2USRa0hSbFkXGzZNJg5a1Qy4z+WoCDMIGic8vLHuytI1ALVEnDy2TNau/5Wx3w==
   dependencies:
     "@codemirror/lang-javascript" "^6.1.4"
     "@codemirror/state" "^6.2.0"
