@@ -1,0 +1,1103 @@
+{
+  "metadata": {
+    "name": "Citation Metadata",
+    "version": 1.0,
+    "description": "",
+    "warnMissingProperty": true
+  },
+  "layouts": {
+    "Dataset": [
+      {
+        "name": "otherId",
+        "description": "Another unique identifier for the Dataset (e.g. producer\u0027s or another repository\u0027s identifier)",
+        "inputs": [
+          "otherIdAgency",
+          "otherIdValue"
+        ]
+      },
+      {
+        "name": "author",
+        "description": "The entity, e.g. a person or organization, that created the Dataset",
+        "inputs": [
+          "authorName",
+          "authorAffiliation",
+          "authorIdentifierScheme",
+          "authorIdentifier"
+        ]
+      },
+      {
+        "name": "datasetContact",
+        "description": "The entity, e.g. a person or organization, that users of the Dataset can contact with questions",
+        "inputs": [
+          "datasetContactName",
+          "datasetContactAffiliation",
+          "datasetContactEmail"
+        ]
+      },
+      {
+        "name": "dsDescription",
+        "description": "A summary describing the purpose, nature, and scope of the Dataset",
+        "inputs": [
+          "dsDescriptionValue",
+          "dsDescriptionDate"
+        ]
+      },
+      {
+        "name": "keyword",
+        "description": "A key term that describes an important aspect of the Dataset and information about any controlled vocabulary used",
+        "inputs": [
+          "keywordValue",
+          "keywordVocabulary",
+          "keywordVocabularyURI"
+        ]
+      },
+      {
+        "name": "topicClassification",
+        "description": "Indicates a broad, important topic or subject that the Dataset covers and information about any controlled vocabulary used",
+        "inputs": [
+          "topicClassValue",
+          "topicClassVocab",
+          "topicClassVocabURI"
+        ]
+      },
+      {
+        "name": "publication",
+        "description": "The article or report that uses the data in the Dataset. The full list of related publications will be displayed on the metadata tab",
+        "inputs": [
+          "publicationCitation",
+          "publicationIDType",
+          "publicationIDNumber",
+          "publicationURL"
+        ]
+      },
+      {
+        "name": "producer",
+        "description": "The entity, such a person or organization, managing the finances or other administrative processes involved in the creation of the Dataset",
+        "inputs": [
+          "producerName",
+          "producerAffiliation",
+          "producerAbbreviation",
+          "producerURL",
+          "producerLogoURL"
+        ]
+      },
+      {
+        "name": "contributor",
+        "description": "The entity, such as a person or organization, responsible for collecting, managing, or otherwise contributing to the development of the Dataset",
+        "inputs": [
+          "contributorType",
+          "contributorName"
+        ]
+      },
+      {
+        "name": "grantNumber",
+        "description": "Information about the Dataset\u0027s financial support",
+        "inputs": [
+          "grantNumberAgency",
+          "grantNumberValue"
+        ]
+      },
+      {
+        "name": "distributor",
+        "description": "The entity, such as a person or organization, designated to generate copies of the Dataset, including any editions or revisions",
+        "inputs": [
+          "distributorName",
+          "distributorAffiliation",
+          "distributorAbbreviation",
+          "distributorURL",
+          "distributorLogoURL"
+        ]
+      },
+      {
+        "name": "timePeriodCovered",
+        "description": "The time period that the data refer to. Also known as span. This is the time period covered by the data, not the dates of coding, collecting data, or making documents machine-readable",
+        "inputs": [
+          "timePeriodCoveredStart",
+          "timePeriodCoveredEnd"
+        ]
+      },
+      {
+        "name": "dateOfCollection",
+        "description": "The dates when the data were collected or generated",
+        "inputs": [
+          "dateOfCollectionStart",
+          "dateOfCollectionEnd"
+        ]
+      },
+      {
+        "name": "series",
+        "description": "Information about the dataset series to which the Dataset belong",
+        "inputs": [
+          "seriesName",
+          "seriesInformation"
+        ]
+      },
+      {
+        "name": "software",
+        "description": "Information about the software used to generate the Dataset",
+        "inputs": [
+          "softwareName",
+          "softwareVersion"
+        ]
+      }
+    ]
+  },
+  "classes": {
+    "Dataset": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "http://purl.org/dc/terms/title",
+          "name": "title",
+          "label": "Title",
+          "help": "The main title of the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": true,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/subtitle",
+          "name": "subtitle",
+          "label": "Subtitle",
+          "help": "A secondary title that amplifies or states certain limitations on the main title",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/dc/terms/alternative",
+          "name": "alternativeTitle",
+          "label": "Alternative Title",
+          "help": "Either 1) a title commonly used to refer to the Dataset or 2) an abbreviation of the main title",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://schema.org/distribution",
+          "name": "alternativeURL",
+          "label": "Alternative URL",
+          "help": "Another URL where one can view or access the data in the Dataset, e.g. a project or personal webpage",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/otherIdAgency",
+          "name": "otherIdAgency",
+          "label": "Agency",
+          "help": "The name of the agency that generated the other identifier",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/otherIdValue",
+          "name": "otherIdValue",
+          "label": "Identifier",
+          "help": "Another identifier uniquely identifies the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/authorName",
+          "name": "authorName",
+          "label": "Name",
+          "help": "The name of the author, such as the person\u0027s name or the name of an organization",
+          "type": [
+            "Text"
+          ],
+          "required": true,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/authorAffiliation",
+          "name": "authorAffiliation",
+          "label": "Affiliation",
+          "help": "The name of the entity affiliated with the author, e.g. an organization\u0027s name",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/spar/datacite/AgentIdentifierScheme",
+          "name": "authorIdentifierScheme",
+          "label": "Identifier Type",
+          "help": "The type of identifier that uniquely identifies the author (e.g. ORCID, ISNI)",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "ORCID",
+            "ISNI",
+            "LCNA",
+            "VIAF",
+            "GND",
+            "DAI",
+            "ResearcherID",
+            "ScopusID"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/spar/datacite/AgentIdentifier",
+          "name": "authorIdentifier",
+          "label": "Identifier",
+          "help": "Uniquely identifies the author when paired with an identifier type",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/datasetContactName",
+          "name": "datasetContactName",
+          "label": "Name",
+          "help": "The name of the point of contact, e.g. the person\u0027s name or the name of an organization",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/datasetContactAffiliation",
+          "name": "datasetContactAffiliation",
+          "label": "Affiliation",
+          "help": "The name of the entity affiliated with the point of contact, e.g. an organization\u0027s name",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/datasetContactEmail",
+          "name": "datasetContactEmail",
+          "label": "E-mail",
+          "help": "The point of contact\u0027s email address",
+          "type": [
+            "Text"
+          ],
+          "required": true,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/dsDescriptionValue",
+          "name": "dsDescriptionValue",
+          "label": "Text",
+          "help": "A summary describing the purpose, nature, and scope of the Dataset",
+          "type": [
+            "TextArea"
+          ],
+          "required": true,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/dsDescriptionDate",
+          "name": "dsDescriptionDate",
+          "label": "Date",
+          "help": "The date when the description was added to the Dataset. If the Dataset contains more than one description, e.g. the data producer supplied one description and the data repository supplied another, this date is used to distinguish between the descriptions",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/dc/terms/subject",
+          "name": "subject",
+          "label": "Subject",
+          "help": "The area of study relevant to the Dataset",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "Agricultural Sciences",
+            "Arts and Humanities",
+            "Astronomy and Astrophysics",
+            "Business and Management",
+            "Chemistry",
+            "Computer and Information Science",
+            "Earth and Environmental Sciences",
+            "Engineering",
+            "Law",
+            "Mathematical Sciences",
+            "Medicine, Health and Life Sciences",
+            "Physics",
+            "Social Sciences",
+            "Other"
+          ],
+          "required": true,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/keywordValue",
+          "name": "keywordValue",
+          "label": "Term",
+          "help": "A key term that describes important aspects of the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/keywordVocabulary",
+          "name": "keywordVocabulary",
+          "label": "Controlled Vocabulary Name",
+          "help": "The controlled vocabulary used for the keyword term (e.g. LCSH, MeSH)",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/keywordVocabularyURI",
+          "name": "keywordVocabularyURI",
+          "label": "Controlled Vocabulary URL",
+          "help": "The URL where one can access information about the term\u0027s controlled vocabulary",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/topicClassValue",
+          "name": "topicClassValue",
+          "label": "Term",
+          "help": "A topic or subject term",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/topicClassVocab",
+          "name": "topicClassVocab",
+          "label": "Controlled Vocabulary Name",
+          "help": "The controlled vocabulary used for the keyword term (e.g. LCSH, MeSH)",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/topicClassVocabURI",
+          "name": "topicClassVocabURI",
+          "label": "Controlled Vocabulary URL",
+          "help": "The URL where one can access information about the term\u0027s controlled vocabulary",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/dc/terms/bibliographicCitation",
+          "name": "publicationCitation",
+          "label": "Citation",
+          "help": "The full bibliographic citation for the related publication",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/spar/datacite/ResourceIdentifierScheme",
+          "name": "publicationIDType",
+          "label": "Identifier Type",
+          "help": "The type of identifier that uniquely identifies a related publication",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "ark",
+            "arXiv",
+            "bibcode",
+            "cstr",
+            "doi",
+            "ean13",
+            "eissn",
+            "handle",
+            "isbn",
+            "issn",
+            "istc",
+            "lissn",
+            "lsid",
+            "pmid",
+            "purl",
+            "upc",
+            "url",
+            "urn",
+            "DASH-NRS"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/spar/datacite/ResourceIdentifier",
+          "name": "publicationIDNumber",
+          "label": "Identifier",
+          "help": "The identifier for a related publication",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://schema.org/distribution",
+          "name": "publicationURL",
+          "label": "URL",
+          "help": "The URL form of the identifier entered in the Identifier field, e.g. the DOI URL if a DOI was entered in the Identifier field. Used to display what was entered in the ID Type and ID Number fields as a link. If what was entered in the Identifier field has no URL form, the URL of the publication webpage is used, e.g. a journal article webpage",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/notesText",
+          "name": "notesText",
+          "label": "Notes",
+          "help": "Additional information about the Dataset",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/dc/terms/language",
+          "name": "language",
+          "label": "Language",
+          "help": "A language that the Dataset\u0027s files is written in",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "Abkhaz",
+            "Afar",
+            "Afrikaans",
+            "Akan",
+            "Albanian",
+            "Amharic",
+            "Arabic",
+            "Aragonese",
+            "Armenian",
+            "Assamese",
+            "Avaric",
+            "Avestan",
+            "Aymara",
+            "Azerbaijani",
+            "Bambara",
+            "Bashkir",
+            "Basque",
+            "Belarusian",
+            "Bengali, Bangla",
+            "Bihari",
+            "Bislama",
+            "Bosnian",
+            "Breton",
+            "Bulgarian",
+            "Burmese",
+            "Catalan,Valencian",
+            "Chamorro",
+            "Chechen",
+            "Chichewa, Chewa, Nyanja",
+            "Chinese",
+            "Chuvash",
+            "Cornish",
+            "Corsican",
+            "Cree",
+            "Croatian",
+            "Czech",
+            "Danish",
+            "Divehi, Dhivehi, Maldivian",
+            "Dutch",
+            "Dzongkha",
+            "English",
+            "Esperanto",
+            "Estonian",
+            "Ewe",
+            "Faroese",
+            "Fijian",
+            "Finnish",
+            "French",
+            "Fula, Fulah, Pulaar, Pular",
+            "Galician",
+            "Georgian",
+            "German",
+            "Greek (modern)",
+            "Guaraní",
+            "Gujarati",
+            "Haitian, Haitian Creole",
+            "Hausa",
+            "Hebrew (modern)",
+            "Herero",
+            "Hindi",
+            "Hiri Motu",
+            "Hungarian",
+            "Interlingua",
+            "Indonesian",
+            "Interlingue",
+            "Irish",
+            "Igbo",
+            "Inupiaq",
+            "Ido",
+            "Icelandic",
+            "Italian",
+            "Inuktitut",
+            "Japanese",
+            "Javanese",
+            "Kalaallisut, Greenlandic",
+            "Kannada",
+            "Kanuri",
+            "Kashmiri",
+            "Kazakh",
+            "Khmer",
+            "Kikuyu, Gikuyu",
+            "Kinyarwanda",
+            "Kyrgyz",
+            "Komi",
+            "Kongo",
+            "Korean",
+            "Kurdish",
+            "Kwanyama, Kuanyama",
+            "Latin",
+            "Luxembourgish, Letzeburgesch",
+            "Ganda",
+            "Limburgish, Limburgan, Limburger",
+            "Lingala",
+            "Lao",
+            "Lithuanian",
+            "Luba-Katanga",
+            "Latvian",
+            "Manx",
+            "Macedonian",
+            "Malagasy",
+            "Malay",
+            "Malayalam",
+            "Maltese",
+            "Māori",
+            "Marathi (Marāṭhī)",
+            "Marshallese",
+            "Mixtepec Mixtec",
+            "Mongolian",
+            "Nauru",
+            "Navajo, Navaho",
+            "Northern Ndebele",
+            "Nepali",
+            "Ndonga",
+            "Norwegian Bokmål",
+            "Norwegian Nynorsk",
+            "Norwegian",
+            "Nuosu",
+            "Southern Ndebele",
+            "Occitan",
+            "Ojibwe, Ojibwa",
+            "Old Church Slavonic,Church Slavonic,Old Bulgarian",
+            "Oromo",
+            "Oriya",
+            "Ossetian, Ossetic",
+            "Panjabi, Punjabi",
+            "Pāli",
+            "Persian (Farsi)",
+            "Polish",
+            "Pashto, Pushto",
+            "Portuguese",
+            "Quechua",
+            "Romansh",
+            "Kirundi",
+            "Romanian",
+            "Russian",
+            "Sanskrit (Saṁskṛta)",
+            "Sardinian",
+            "Sindhi",
+            "Northern Sami",
+            "Samoan",
+            "Sango",
+            "Serbian",
+            "Scottish Gaelic, Gaelic",
+            "Shona",
+            "Sinhala, Sinhalese",
+            "Slovak",
+            "Slovene",
+            "Somali",
+            "Southern Sotho",
+            "Spanish, Castilian",
+            "Sundanese",
+            "Swahili",
+            "Swati",
+            "Swedish",
+            "Tamil",
+            "Telugu",
+            "Tajik",
+            "Thai",
+            "Tigrinya",
+            "Tibetan Standard, Tibetan, Central",
+            "Turkmen",
+            "Tagalog",
+            "Tswana",
+            "Tonga (Tonga Islands)",
+            "Turkish",
+            "Tsonga",
+            "Tatar",
+            "Twi",
+            "Tahitian",
+            "Uyghur, Uighur",
+            "Ukrainian",
+            "Urdu",
+            "Uzbek",
+            "Venda",
+            "Vietnamese",
+            "Volapük",
+            "Walloon",
+            "Welsh",
+            "Wolof",
+            "Western Frisian",
+            "Xhosa",
+            "Yiddish",
+            "Yoruba",
+            "Zhuang, Chuang",
+            "Zulu",
+            "Not applicable"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/producerName",
+          "name": "producerName",
+          "label": "Name",
+          "help": "The name of the entity, e.g. the person\u0027s name or the name of an organization",
+          "type": [
+            "Text"
+          ],
+          "required": true,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/producerAffiliation",
+          "name": "producerAffiliation",
+          "label": "Affiliation",
+          "help": "The name of the entity affiliated with the producer, e.g. an organization\u0027s name",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/producerAbbreviation",
+          "name": "producerAbbreviation",
+          "label": "Abbreviated Name",
+          "help": "The producer\u0027s abbreviated name (e.g. IQSS, ICPSR)",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/producerURL",
+          "name": "producerURL",
+          "label": "URL",
+          "help": "The URL of the producer\u0027s website",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/producerLogoURL",
+          "name": "producerLogoURL",
+          "label": "Logo URL",
+          "help": "The URL of the producer\u0027s logo",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/productionDate",
+          "name": "productionDate",
+          "label": "Production Date",
+          "help": "The date when the data were produced (not distributed, published, or archived)",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/productionPlace",
+          "name": "productionPlace",
+          "label": "Production Location",
+          "help": "The location where the data and any related materials were produced or collected",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/contributorType",
+          "name": "contributorType",
+          "label": "Type",
+          "help": "Indicates the type of contribution made to the dataset",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "Data Collector",
+            "Data Curator",
+            "Data Manager",
+            "Editor",
+            "Funder",
+            "Hosting Institution",
+            "Project Leader",
+            "Project Manager",
+            "Project Member",
+            "Related Person",
+            "Researcher",
+            "Research Group",
+            "Rights Holder",
+            "Sponsor",
+            "Supervisor",
+            "Work Package Leader",
+            "Other"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/contributorName",
+          "name": "contributorName",
+          "label": "Name",
+          "help": "The name of the contributor, e.g. the person\u0027s name or the name of an organization",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/grantNumberAgency",
+          "name": "grantNumberAgency",
+          "label": "Agency",
+          "help": "The agency that provided financial support for the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/grantNumberValue",
+          "name": "grantNumberValue",
+          "label": "Identifier",
+          "help": "The grant identifier or contract identifier of the agency that provided financial support for the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributorName",
+          "name": "distributorName",
+          "label": "Name",
+          "help": "The name of the entity, e.g. the person\u0027s name or the name of an organization",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributorAffiliation",
+          "name": "distributorAffiliation",
+          "label": "Affiliation",
+          "help": "The name of the entity affiliated with the distributor, e.g. an organization\u0027s name",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributorAbbreviation",
+          "name": "distributorAbbreviation",
+          "label": "Abbreviated Name",
+          "help": "The distributor\u0027s abbreviated name (e.g. IQSS, ICPSR)",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributorURL",
+          "name": "distributorURL",
+          "label": "URL",
+          "help": "The URL of the distributor\u0027s webpage",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributorLogoURL",
+          "name": "distributorLogoURL",
+          "label": "Logo URL",
+          "help": "The URL of the distributor\u0027s logo image, used to show the image on the Dataset\u0027s page",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributionDate",
+          "name": "distributionDate",
+          "label": "Distribution Date",
+          "help": "The date when the Dataset was made available for distribution/presentation",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/depositor",
+          "name": "depositor",
+          "label": "Depositor",
+          "help": "The entity, such as a person or organization, that deposited the Dataset in the repository",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/dc/terms/dateSubmitted",
+          "name": "dateOfDeposit",
+          "label": "Deposit Date",
+          "help": "The date when the Dataset was deposited into the repository",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/timePeriodCoveredStart",
+          "name": "timePeriodCoveredStart",
+          "label": "Start Date",
+          "help": "The start date of the time period that the data refer to",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/timePeriodCoveredEnd",
+          "name": "timePeriodCoveredEnd",
+          "label": "End Date",
+          "help": "The end date of the time period that the data refer to",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/dateOfCollectionStart",
+          "name": "dateOfCollectionStart",
+          "label": "Start Date",
+          "help": "The date when the data collection started",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/dateOfCollectionEnd",
+          "name": "dateOfCollectionEnd",
+          "label": "End Date",
+          "help": "The date when the data collection ended",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://rdf-vocabulary.ddialliance.org/discovery#kindOfData",
+          "name": "kindOfData",
+          "label": "Data Type",
+          "help": "The type of data included in the files (e.g. survey data, clinical data, or machine-readable text)",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/seriesName",
+          "name": "seriesName",
+          "label": "Name",
+          "help": "The name of the dataset series",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/seriesInformation",
+          "name": "seriesInformation",
+          "label": "Information",
+          "help": "Can include 1) a history of the series and 2) a summary of features that apply to the series",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/softwareName",
+          "name": "softwareName",
+          "label": "Name",
+          "help": "The name of software used to generate the Dataset",
+          "type": [
+            "Select"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/softwareVersion",
+          "name": "softwareVersion",
+          "label": "Version",
+          "help": "The version of the software used to generate the Dataset, e.g. 4.11",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/relatedMaterial",
+          "name": "relatedMaterial",
+          "label": "Related Material",
+          "help": "Information, such as a persistent ID or citation, about the material related to the Dataset, such as appendices or sampling information available outside of the Dataset",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/dc/terms/relation",
+          "name": "relatedDatasets",
+          "label": "Related Dataset",
+          "help": "Information, such as a persistent ID or citation, about a related dataset, such as previous research on the Dataset\u0027s subject",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/dc/terms/references",
+          "name": "otherReferences",
+          "label": "Other Reference",
+          "help": "Information, such as a persistent ID or citation, about another type of resource that provides background or supporting material to the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://www.w3.org/TR/prov-o/#wasDerivedFrom",
+          "name": "dataSources",
+          "label": "Data Source",
+          "help": "Information, such as a persistent ID or citation, about sources of the Dataset (e.g. a book, article, serial, or machine-readable data file)",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/originOfSources",
+          "name": "originOfSources",
+          "label": "Origin of Historical Sources",
+          "help": "For historical sources, the origin and any rules followed in establishing them as sources",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/characteristicOfSources",
+          "name": "characteristicOfSources",
+          "label": "Characteristic of Sources",
+          "help": "Characteristics not already noted elsewhere",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/accessToSources",
+          "name": "accessToSources",
+          "label": "Documentation and Access to Sources",
+          "help": "1) Methods or procedures for accessing data sources and 2) any special permissions needed for access",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ]
+    }
+  },
+  "enabledClasses": [
+    "Dataset"
+  ]
+}
