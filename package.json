@@ -1,6 +1,6 @@
 {
   "name": "@describo/crate-builder-component-react",
-  "version": "0.27s.1",
+  "version": "0.27.1",
   "description": "Describo Crate Builder in React",
   "author": "Balazs E. Pataki",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "rollup -c",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "lib/**",
