@@ -12,9 +12,10 @@ import profile2 from "./examples/profile/test-profile-with-groups.json";
 import profile3 from "./examples/profile/test-profile-with-datapacks-and-without-groups.json";
 import profile4 from "./examples/profile/nyingarn-item-profile.json";
 import profile5 from "./examples/profile/citation.profile.json";
+import profile6 from "./examples/profile/dv.json";
 
 const emptyProfile = {}
-const profiles = { emptyProfile, profile1, profile2, profile3, profile4, profile5 };
+const profiles = { emptyProfile, profile1, profile2, profile3, profile4, profile5, profile6};
 
 export default {
   title: "Describo Crate Builder",
@@ -39,6 +40,7 @@ export default {
           profile3: "Profile with datapacks and without groups",
           profile4: "NYINGARN Profile",
           profile5: "Dataverse Citation Profile",
+          profile6: "Dataverse Hun Profile",
         }
       },
     }
