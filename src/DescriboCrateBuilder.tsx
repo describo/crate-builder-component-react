@@ -105,7 +105,7 @@ export default function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
   // @ts-ignore
   if (!globalThis[configName]) {
     // @ts-ignore
-    globalThis[configName] = {}
+    globalThis[configName] = toDescriboConfig(props)
   }
 
   useEffect(() => {
