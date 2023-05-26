@@ -9,6 +9,7 @@
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "prepare": "relative-deps",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -63,5 +64,8 @@
   },
   "dependencies": {
     "@describo/crate-builder-component": "0.35.5"
+  },
+  "relativeDependenciesX": {
+    "@describo/crate-builder-component": "../crate-builder-component"
   }
 }
