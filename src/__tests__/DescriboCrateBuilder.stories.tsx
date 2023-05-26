@@ -86,3 +86,13 @@ Readonly.args = {
   readonly: true
 }
 
+export const NoLinkBrowser = Template.bind({});
+NoLinkBrowser.args = {
+  crate: crateFile2,
+  enableReverseLinkBrowser: false,
+  enableContextEditor: false,
+  enableCratePreview: false,
+  enableBrowseEntities: false,
+}
+
+

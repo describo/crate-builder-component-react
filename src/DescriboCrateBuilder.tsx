@@ -53,6 +53,12 @@ export type DescriboCrateBuilderProps = {
   // If true, component will not allow changes and won't call onSaveCrate()
   readonly?: boolean,
 
+  // enableReverseLinkBrowser: (default: true): enable / disable the reverse link browser. If enabled, it can be shown as a right sidebar as required.
+  enableReverseLinkBrowser?: boolean,
+
+  // purgeUnlinkedEntities: (default: true): purge unlinked entities from the crate before emitting the crate for saving
+  purgeUnlinkedEntities?: boolean
+
   // Callback when component is ready to be used.
   onReady?: () => void,
 
@@ -84,7 +90,9 @@ function toDescriboConfig(props: DescriboCrateBuilderProps) {
       enableBrowseEntities: props.enableBrowseEntities,
       enableTemplateSave: props.enableTemplateSave,
       readonly: props.readonly,
-      enableInternalRouting: false
+      enableInternalRouting: false,
+      enableReverseLinkBrowser: props.enableReverseLinkBrowser,
+      purgeUnlinkedEntities: props.purgeUnlinkedEntities
     }
   }
 }
@@ -154,7 +162,8 @@ export default function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
     globalThis[configName] = toDescriboConfig(props)
     // Need to update configVersion to inform the vue component about the change
     setConfigVersion(configVersion+1)
-  }, [props.crate, props.profile, props.entityId, props.enableBrowseEntities, props.enableCratePreview, props.enableContextEditor, props.enableTemplateSave])
+  }, [props.crate, props.profile, props.entityId, props.enableBrowseEntities, props.enableCratePreview,
+    props.enableContextEditor, props.enableTemplateSave, props.enableReverseLinkBrowser, props.purgeUnlinkedEntities])
 
   return(
     <>
