@@ -59,6 +59,9 @@ export type DescriboCrateBuilderProps = {
   // purgeUnlinkedEntities: (default: true): purge unlinked entities from the crate before emitting the crate for saving
   purgeUnlinkedEntities?: boolean
 
+  // localization language of the component. Suppoerted values: en, hu, defaults to en
+  language?: string
+
   // Callback when component is ready to be used.
   onReady?: () => void,
 
@@ -92,7 +95,8 @@ function toDescriboConfig(props: DescriboCrateBuilderProps) {
       readonly: props.readonly,
       enableInternalRouting: false,
       enableReverseLinkBrowser: props.enableReverseLinkBrowser,
-      purgeUnlinkedEntities: props.purgeUnlinkedEntities
+      purgeUnlinkedEntities: props.purgeUnlinkedEntities,
+      language: props.language
     }
   }
 }
@@ -163,7 +167,8 @@ export default function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
     // Need to update configVersion to inform the vue component about the change
     setConfigVersion(configVersion+1)
   }, [props.crate, props.profile, props.entityId, props.enableBrowseEntities, props.enableCratePreview,
-    props.enableContextEditor, props.enableTemplateSave, props.enableReverseLinkBrowser, props.purgeUnlinkedEntities])
+    props.enableContextEditor, props.enableTemplateSave, props.enableReverseLinkBrowser, props.purgeUnlinkedEntities,
+    props.language])
 
   return(
     <>
