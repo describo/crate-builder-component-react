@@ -1,6 +1,6 @@
 {
   "name": "@describo/crate-builder-component-react",
-  "version": "0.36.0",
+  "version": "0.37.1",
   "description": "Describo Crate Builder in React",
   "author": "Balazs E. Pataki",
   "license": "MIT",
@@ -63,7 +63,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@describo/crate-builder-component": "0.36.0"
+    "@describo/crate-builder-component": "0.37.1"
   },
   "relativeDependenciesX": {
     "@describo/crate-builder-component": "../crate-builder-component"
