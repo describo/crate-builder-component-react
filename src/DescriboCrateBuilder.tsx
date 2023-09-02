@@ -1,13 +1,13 @@
 import {useEffect, useRef, useState} from 'react';
 import {App, createApp} from "vue";
+import {ComponentPublicInstance} from "@vue/runtime-core";
+import {DescriboCrateBuilderProps} from "./types";
+import {createRouter, createWebHistory} from "vue-router";
 // @ts-ignore
 import Bridge from "./Bridge.vue";
 // @ts-ignore
 import DescriboCrateBuilderVue from "@describo/crate-builder-component";
 import "@describo/crate-builder-component/dist/vue/style.css";
-import {ComponentPublicInstance} from "@vue/runtime-core";
-import {DescriboCrateBuilderProps} from "./types";
-import {createRouter, createWebHistory} from "vue-router";
 
 function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
   debugger;
