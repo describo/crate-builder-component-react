@@ -1,7 +1,7 @@
 import React from "react";
 import {Meta, StoryFn} from "@storybook/react";
 import CustomMDXDocumentation from './Documentation.mdx';
-import DescriboCrateBuilder from "../DescriboCrateBuilder";
+import DescriboCrateBuilderOld from "../DescriboCrateBuilderOld";
 import crateTestData from "./examples/simple-ro-crate-metadata.json"
 import crateFile1 from "./examples/item/empty/ro-crate-metadata.json";
 import crateFile2 from "./examples/item/complex-collection/ro-crate-metadata.json";
@@ -19,7 +19,7 @@ const profiles = { emptyProfile, profile1, profile2, profile3, profile4, profile
 
 export default {
   title: "Describo Crate Builder",
-  component: DescriboCrateBuilder,
+  component: DescriboCrateBuilderOld,
   parameters: {
     docs: {
       page: CustomMDXDocumentation,
@@ -45,10 +45,13 @@ export default {
       },
     }
   },
-} as Meta<typeof DescriboCrateBuilder>;
+} as Meta<typeof DescriboCrateBuilderOld>;
 
 // Create a master template for mapping args to render the Button component
-const Template: StoryFn<typeof DescriboCrateBuilder> = (args) => <DescriboCrateBuilder {...args} />;
+const Template: StoryFn<typeof DescriboCrateBuilderOld> = (args) => <>
+
+  <DescriboCrateBuilderOld {...args} />
+  </>
 
 export const Simple = Template.bind({});
 Simple.args = {

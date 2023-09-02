@@ -79,6 +79,11 @@ export type DescriboCrateBuilderProps = {
   // Callback when crate builder navigates to a context entity
   onNavigation?: (navigationId: string, entityId: string) => void
 
+  // Location of layout tabs
+  tabLocation?: 'left' | 'right' | 'top' | 'bottom'
+
+  // Show control bar with button like preview, delete entity, etc. or not
+  showControls?: boolean
 }
 
 function toDescriboConfig(props: DescriboCrateBuilderProps) {
@@ -96,12 +101,13 @@ function toDescriboConfig(props: DescriboCrateBuilderProps) {
       enableInternalRouting: false,
       enableReverseLinkBrowser: props.enableReverseLinkBrowser,
       purgeUnlinkedEntities: props.purgeUnlinkedEntities,
-      language: props.language
+      tabLocation: props.tabLocation,
+      showControls: props.showControls
     }
   }
 }
 
-export default function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
+export default function DescriboCrateBuilderOld(props: DescriboCrateBuilderProps) {
   const [configName, _] = useState("DescriboCrateBuilderConfiguration"+"_"+btoa(Math.random().toString()).substring(10,15))
   const [configVersion, setConfigVersion] = useState(1)
   const ref = useRef();

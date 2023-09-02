@@ -1,3 +1,3 @@
-import DescriboCrateBuilder from "./DescriboCrateBuilder";
+import DescriboCrateBuilderOld from "./DescriboCrateBuilderOld";
 
-export { DescriboCrateBuilder };
+export { DescriboCrateBuilderOld };
