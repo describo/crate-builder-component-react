@@ -1,4 +1,4 @@
-import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import "@describo/crate-builder-component/dist/web-component/describo-crate-builder-wc.js"
 // We should not need it, but we do. Without this the AutoComplete's popup won't have a style.
 // https://github.com/vuejs/core/issues/4662
@@ -135,8 +135,8 @@ export default function DescriboCrateBuilderOld(props: DescriboCrateBuilderProps
     }
     current?.addEventListener("save:crate:template", saveCrateTemplateEventHandler)
 
-    const readyEventListener = (event: Event ) => {
-      const customEvent = event as CustomEvent;
+    const readyEventListener = () => {
+      // const customEvent = event as CustomEvent;
       props.onReady?.()
     }
     current?.addEventListener("ready", readyEventListener)

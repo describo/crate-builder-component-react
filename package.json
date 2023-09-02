@@ -5,27 +5,48 @@
   "author": "Balazs E. Pataki",
   "license": "MIT",
   "type": "module",
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts",
+  "main": "./dist/describo-crate-builder-react.umd.cjs",
+  "module": "./dist/describo-crate-builder-react.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/describo-crate-builder-react.js",
+      "require": "./dist/describo-crate-builder-react.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist/**",
+    "src/index.ts",
+    "src/types.ts",
+    "src/DescriboCrateBuilder.tsx",
+    "src/Bridge.vue",
+    "./README.md"
+  ],
+
   "scripts": {
     "prepare": "relative-deps",
     "dev": "relative-deps && vite",
     "build": "tsc && vite build",
+    "build:packdry": "tsc && vite build && npm pack --dry-run",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
     "@describo/crate-builder-component": "^0.39.0",
-    "@describo/crate-builder-component-react": "^0.37.2",
     "element-plus": "^2.3.12",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.4",
-    "vuejs": "^3.0.1"
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^7.0.7",
+    "@storybook/addon-essentials": "^7.0.7",
+    "@storybook/addon-links": "^7.0.7",
+    "@storybook/addon-postcss": "^3.0.0-alpha.1",
+    "@storybook/react": "^7.0.7",
+    "@storybook/react-webpack5": "^7.0.7",
+    "@types/node": "^20.5.9",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -37,7 +58,12 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "relative-deps": "^1.0.7",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.5.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "relativeDependenciesX": {
     "@describo/crate-builder-component-react": "../crate-builder-component-react"

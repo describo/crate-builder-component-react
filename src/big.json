@@ -1,0 +1,488 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "dsDescriptionValue": "https://dataverse.org/schema/citation/dsDescriptionValue",
+      "author": "http://purl.org/dc/terms/creator",
+      "subject": "http://purl.org/dc/terms/subject",
+      "journalIssue": "https://dataverse.org/schema/journal/journalIssue",
+      "journalVolumeIssue": "https://dataverse.org/schema/journal/journalVolumeIssue",
+      "datasetContact": "https://dataverse.org/schema/citation/datasetContact",
+      "title": "http://purl.org/dc/terms/title",
+      "authorAffiliation": "https://dataverse.org/schema/citation/authorAffiliation",
+      "datasetContactName": "https://dataverse.org/schema/citation/datasetContactName",
+      "datasetContactEmail": "https://dataverse.org/schema/citation/datasetContactEmail",
+      "authorName": "https://dataverse.org/schema/citation/authorName",
+      "dsDescription": "https://dataverse.org/schema/citation/dsDescription",
+      "subtitle": "https://dataverse.org/schema/citation/subtitle",
+      "dateOfDeposit": "http://purl.org/dc/terms/dateSubmitted",
+      "datasetContactAffiliation": "https://dataverse.org/schema/citation/datasetContactAffiliation",
+      "studyDesignType": "https://dataverse.org/schema/biomedical/studyDesignType"
+    }
+  ],
+  "@graph": [
+    {
+      "about": {
+        "@id": "./"
+      },
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "./",
+      "datasetContact": {
+        "@id": "#1827::59274624-6e40-4c05-903f-2a3d7805b8cc"
+      },
+      "dsDescription": {
+        "@id": "#1829::37d5726d-8311-4b20-a165-57f6948bccb5"
+      },
+      "author": [
+        {
+          "@id": "#1825::751a6e37-427e-47a7-9022-2186a4e2a5ec"
+        },
+        {
+          "@id": "#1828::0691bd09-477f-4108-aa28-df95278de417"
+        },
+        {
+          "@id": "#1802::9dc25c88-ef15-455a-8cbc-e7c07a70a74f"
+        },
+        {
+          "@id": "#1804::2bfa74e3-6699-4f25-9cad-030437f53d3e"
+        }
+      ],
+      "journalVolumeIssue": {
+        "@id": "#1826::c2e57c9d-20cd-4816-b2c3-6b1eb006618b"
+      },
+      "subtitle": "szubtli",
+      "studyDesignType": "Case Control",
+      "dateOfDeposit": "2023-08-23",
+      "subject": "Agricultural Sciences",
+      "title": "fajlosssss9123456",
+      "hasPart": [
+        {
+          "@id": "#1f063c5b-1fe2-4bfb-af3f-be8002c2e3e9"
+        },
+        {
+          "@id": "#d015cbfa-812a-4b11-b9fe-d2b9f7567960"
+        },
+        {
+          "@id": "#1d313deb-e634-4f40-89f8-742581f9345f"
+        },
+        {
+          "@id": "#b6a1d723-37ee-43e4-95c5-e11ccef80927"
+        },
+        {
+          "@id": "#f85166e3-93de-4cb2-a74b-8e298a678ddb"
+        },
+        {
+          "@id": "#263fdb68-86ae-492c-b8c1-99b72c8617ac"
+        }
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://repo.arp.orgx/templates/c5be29fa-c904-4231-a5f7-6bea5fb00a72"
+        },
+        {
+          "@id": "https://repo.arp.orgx/templates/08ee073c-8298-45f8-84fb-9889b6656451"
+        },
+        {
+          "@id": "https://repo.arp.orgx/templates/461a780d-9ea8-4317-97ca-1d1471386537"
+        },
+        {
+          "@id": "https://repo.arp.orgx/templates/a622d832-9d78-47ca-8327-539e5613087b"
+        },
+        {
+          "@id": "https://repo.arp.orgx/templates/ad958672-ac2d-424c-8311-928a575475ad"
+        },
+        {
+          "@id": "https://repo.arp.orgx/templates/3534a32f-04a2-404f-944e-10205816416a"
+        }
+      ]
+    },
+    {
+      "@id": "#d015cbfa-812a-4b11-b9fe-d2b9f7567960",
+      "@type": [
+        "File"
+      ],
+      "name": "ro-crate-metadata.json",
+      "contentSize": 5696,
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "#1f063c5b-1fe2-4bfb-af3f-be8002c2e3e9",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "dir3",
+      "hasPart": [
+        {
+          "@id": "#7d26caaa-ac03-4a0c-a913-2fd7e2c45006"
+        },
+        {
+          "@id": "#2ac7e522-cfa5-4573-876d-45cc27a9fe30"
+        },
+        {
+          "@id": "#e3140dce-1289-40f2-bd99-9d3ccd6c0fb9"
+        }
+      ]
+    },
+    {
+      "@id": "#1d313deb-e634-4f40-89f8-742581f9345f",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "dir1",
+      "hasPart": [
+        {
+          "@id": "#38cfe4ab-93e5-4b34-80f1-abe2bbb06876"
+        },
+        {
+          "@id": "#ec726218-0af9-42af-baac-5aba79476c05"
+        },
+        {
+          "@id": "#edf3a184-d354-46e4-9f52-c2dde78746fe"
+        },
+        {
+          "@id": "#bfffc85c-df58-4aa0-8844-8b26b1f0625b"
+        },
+        {
+          "@id": "#8bfb18aa-9f7f-4c9f-84cc-59d5a87e1592"
+        }
+      ]
+    },
+    {
+      "@id": "#b6a1d723-37ee-43e4-95c5-e11ccef80927",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "dir2",
+      "hasPart": [
+        {
+          "@id": "#404feb4f-af00-4643-b218-ca1997656aa5"
+        },
+        {
+          "@id": "#97178c17-dac2-4917-93ad-bdd7f063f96b"
+        }
+      ]
+    },
+    {
+      "@id": "#f85166e3-93de-4cb2-a74b-8e298a678ddb",
+      "@type": [
+        "File"
+      ],
+      "name": "clustered-bar-chart.png",
+      "contentSize": 11075,
+      "encodingFormat": "image/png",
+      "description": "itt a leiras"
+    },
+    {
+      "@id": "#263fdb68-86ae-492c-b8c1-99b72c8617ac",
+      "@type": [
+        "File"
+      ],
+      "name": "javascript-charts-graphs-index-data-label.png",
+      "contentSize": 5257,
+      "encodingFormat": "image/png"
+    },
+    {
+      "@id": "#8964d27c-cfcc-4bc8-a379-688bcfe97f6d",
+      "@type": [
+        "File"
+      ],
+      "name": "1200px-Pushkin_population_history.svg.png",
+      "contentSize": 36464,
+      "encodingFormat": "image/png",
+      "directoryLabel": "dir1/dir1.2"
+    },
+    {
+      "@id": "#38cfe4ab-93e5-4b34-80f1-abe2bbb06876",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "dir1.2",
+      "hasPart": [
+        {
+          "@id": "#8964d27c-cfcc-4bc8-a379-688bcfe97f6d"
+        },
+        {
+          "@id": "#36de805a-bc15-4434-89d4-5c5ade7e84df"
+        },
+        {
+          "@id": "#18454fd0-10c2-4706-82c9-1f14dfba6232"
+        },
+        {
+          "@id": "#b2db197e-6c2b-4a17-b4e5-0fc008e46bba"
+        }
+      ]
+    },
+    {
+      "@id": "#1804::2bfa74e3-6699-4f25-9cad-030437f53d3e",
+      "@type": [
+        "author"
+      ],
+      "name": "Fuu Ize dv 2"
+    },
+    {
+      "@id": "#bf3f8e37-b300-4f14-a004-0057f993b90c",
+      "@type": [
+        "File"
+      ],
+      "name": "Writing-B1-Describing-charts-3-low.jpg",
+      "contentSize": 163403,
+      "encodingFormat": "image/jpeg",
+      "directoryLabel": "dir1/dir1.2/dir1.2.1"
+    },
+    {
+      "@id": "#1829::37d5726d-8311-4b20-a165-57f6948bccb5",
+      "@type": [
+        "dsDescription"
+      ],
+      "name": "Leiras",
+      "dsDescriptionValue": "Leiras"
+    },
+    {
+      "@id": "#8bfb18aa-9f7f-4c9f-84cc-59d5a87e1592",
+      "@type": [
+        "File"
+      ],
+      "name": "fair-impact-proposal.txt",
+      "contentSize": 1330,
+      "encodingFormat": "text/plain",
+      "directoryLabel": "dir1"
+    },
+    {
+      "@id": "#50098392-5fb9-4a4c-9ef7-82202434dbc6",
+      "@type": [
+        "File"
+      ],
+      "name": "chart-pie3.jpg",
+      "contentSize": 20191,
+      "encodingFormat": "image/jpeg",
+      "directoryLabel": "dir1/dir2"
+    },
+    {
+      "@id": "#95d62b9f-bd78-42b4-aa9f-22668a3c18d0",
+      "@type": [
+        "File"
+      ],
+      "name": "wordpress-charts-2.png",
+      "contentSize": 129309,
+      "encodingFormat": "image/png",
+      "directoryLabel": "dir2/dir2.1"
+    },
+    {
+      "@id": "#e3140dce-1289-40f2-bd99-9d3ccd6c0fb9",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "dir3.2",
+      "hasPart": [
+        {
+          "@id": "#2d1eaa7e-12e3-4601-8d28-3e1fc034ef54"
+        },
+        {
+          "@id": "#fcffebb4-856d-4b73-bfda-de93be5ddb46"
+        }
+      ]
+    },
+    {
+      "@id": "#2d1eaa7e-12e3-4601-8d28-3e1fc034ef54",
+      "@type": [
+        "File"
+      ],
+      "name": "dotdash_INV_Final_Line_Chart_Jan_2021-01-d2dc4eb9a59c43468e48c03e15501ebe.jpg",
+      "contentSize": 104740,
+      "encodingFormat": "image/jpeg",
+      "directoryLabel": "dir3/dir3.2"
+    },
+    {
+      "@id": "#97178c17-dac2-4917-93ad-bdd7f063f96b",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "dir2.1",
+      "hasPart": {
+        "@id": "#95d62b9f-bd78-42b4-aa9f-22668a3c18d0"
+      }
+    },
+    {
+      "@id": "#2ac7e522-cfa5-4573-876d-45cc27a9fe30",
+      "@type": [
+        "File"
+      ],
+      "name": "angular-multi-series-chart.png",
+      "contentSize": 8585,
+      "encodingFormat": "image/png",
+      "directoryLabel": "dir3"
+    },
+    {
+      "@id": "#fcffebb4-856d-4b73-bfda-de93be5ddb46",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "dir3.2.1",
+      "hasPart": {
+        "@id": "#7bb24296-d91e-4b06-b040-2752de5a552a"
+      }
+    },
+    {
+      "@id": "#404feb4f-af00-4643-b218-ca1997656aa5",
+      "@type": [
+        "File"
+      ],
+      "name": "pie-chart-example-1.png",
+      "contentSize": 13384,
+      "encodingFormat": "image/png",
+      "directoryLabel": "dir2"
+    },
+    {
+      "@id": "#1828::0691bd09-477f-4108-aa28-df95278de417",
+      "@type": [
+        "author"
+      ],
+      "name": "Fuu Ize dv 2",
+      "authorName": "Fuu Ize dv 2"
+    },
+    {
+      "@id": "#e2521cbe-a735-4f10-80a9-ba3e0aaba35a",
+      "@type": [
+        "File"
+      ],
+      "name": "51bf1af2eab8ea4405000000.webp",
+      "contentSize": 16114,
+      "encodingFormat": "image/webp",
+      "directoryLabel": "dir3/dir3.1"
+    },
+    {
+      "@id": "#b2db197e-6c2b-4a17-b4e5-0fc008e46bba",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "dir1.2.1",
+      "hasPart": {
+        "@id": "#bf3f8e37-b300-4f14-a004-0057f993b90c"
+      }
+    },
+    {
+      "@id": "#1825::751a6e37-427e-47a7-9022-2186a4e2a5ec",
+      "@type": [
+        "author"
+      ],
+      "name": "Admin, Dataverse; (Dataverse.org)",
+      "authorName": "Admin, Dataverse",
+      "authorAffiliation": "Dataverse.org"
+    },
+    {
+      "@id": "#1802::9dc25c88-ef15-455a-8cbc-e7c07a70a74f",
+      "@type": [
+        "author"
+      ],
+      "name": "Admin, Dataverse; (Dataverse.org)"
+    },
+    {
+      "@id": "#1827::59274624-6e40-4c05-903f-2a3d7805b8cc",
+      "@type": [
+        "datasetContact"
+      ],
+      "name": "Admin, Dataverse; (Dataverse.org); ",
+      "datasetContactName": "Admin, Dataverse",
+      "datasetContactAffiliation": "Dataverse.org",
+      "datasetContactEmail": "dataverse@mailinator.com"
+    },
+    {
+      "@id": "#36de805a-bc15-4434-89d4-5c5ade7e84df",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "dir1.2.2",
+      "hasPart": {
+        "@id": "#5c55ca18-6866-4b16-a327-e0e38f2269b6"
+      }
+    },
+    {
+      "@id": "#1826::c2e57c9d-20cd-4816-b2c3-6b1eb006618b",
+      "@type": [
+        "journalVolumeIssue"
+      ],
+      "name": "issue aaa",
+      "journalIssue": "issue aaa"
+    },
+    {
+      "@id": "#ec726218-0af9-42af-baac-5aba79476c05",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "dir2",
+      "hasPart": {
+        "@id": "#50098392-5fb9-4a4c-9ef7-82202434dbc6"
+      }
+    },
+    {
+      "@id": "#bfffc85c-df58-4aa0-8844-8b26b1f0625b",
+      "@type": [
+        "File"
+      ],
+      "name": "types-of-data-visualization-charts.jpg",
+      "contentSize": 95375,
+      "encodingFormat": "image/jpeg",
+      "directoryLabel": "dir1"
+    },
+    {
+      "@id": "#5c55ca18-6866-4b16-a327-e0e38f2269b6",
+      "@type": [
+        "File"
+      ],
+      "name": "img_excel_chart_intro_1.svg",
+      "contentSize": 21951,
+      "encodingFormat": "image/svg+xml",
+      "directoryLabel": "dir1/dir1.2/dir1.2.2"
+    },
+    {
+      "@id": "#18454fd0-10c2-4706-82c9-1f14dfba6232",
+      "@type": [
+        "File"
+      ],
+      "name": "set-elements-chart-infographics-graphs-diagrams-chart-color_90220-326.avif",
+      "contentSize": 80489,
+      "encodingFormat": "application/octet-stream",
+      "directoryLabel": "dir1/dir1.2"
+    },
+    {
+      "@id": "#edf3a184-d354-46e4-9f52-c2dde78746fe",
+      "@type": [
+        "File"
+      ],
+      "name": "charts_graphs_0.png",
+      "contentSize": 18294,
+      "encodingFormat": "image/png",
+      "directoryLabel": "dir1"
+    },
+    {
+      "@id": "#7bb24296-d91e-4b06-b040-2752de5a552a",
+      "@type": [
+        "File"
+      ],
+      "name": "software_quality-project_management_gantt-f_mobile.png",
+      "contentSize": 11108,
+      "encodingFormat": "image/png",
+      "directoryLabel": "dir3/dir3.2/dir3.2.1"
+    },
+    {
+      "@id": "#7d26caaa-ac03-4a0c-a913-2fd7e2c45006",
+      "@type": [
+        "Dataset"
+      ],
+      "name": "dir3.1",
+      "hasPart": {
+        "@id": "#e2521cbe-a735-4f10-80a9-ba3e0aaba35a"
+      }
+    }
+  ]
+}

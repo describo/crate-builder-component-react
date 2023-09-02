@@ -1,9 +1,8 @@
 
 import './App.css'
-import DescriboNewSfcBased from "./DescriboNewSfcBased";
+import DescriboCrateBuilder from "./DescriboCrateBuilder";
 import {useState} from "react";
-import DescriboNewOptionsApiBased from "./DescriboNewOptionsApiBased";
-import {DescriboCrateBuilder} from "@describo/crate-builder-component-react";
+import {JSONObject} from "./types";
 
 const crate1 = {
   "@context": [
@@ -78,8 +77,12 @@ const crate2 = {
     }
   ]
 }
+import big from "./big.json"
+
 function App() {
-  const [crate, setCrate] = useState(crate1)
+  const [crate, setCrate] = useState<JSONObject>(big)
+  const [entityId, setEntityId] = useState("./")
+  //#1828::0691bd09-477f-4108-aa28-df95278de417
   function changeCrate() {
     if (JSON.stringify(crate) == JSON.stringify(crate1)) {
       setCrate(crate2)
@@ -91,13 +94,18 @@ function App() {
   return (
     <>
       <button onClick={changeCrate}>Change crate from react</button>
-      <h1>DescriboNewOptionsApiBased</h1>
-      <DescriboNewOptionsApiBased crate={crate}/>
+      <button onClick={() => setEntityId('#1828::0691bd09-477f-4108-aa28-df95278de417')}>Change entityId</button>
       <h1>DescriboNewSfcBased / Composition API</h1>
-      <DescriboNewSfcBased crate={crate}/>
-      {/*<h1>Oldschool</h1>*/}
-      {/*<DescriboCrateBuilder crate={crate}/>*/}
-      {/*{JSON.stringify(crate)}*/}
+      <DescriboCrateBuilder
+        crate={crate}
+        language={"hu"}
+        enableCratePreview={true}
+        entityId={entityId}
+        onReady={() => console.log("+++ onReady")}
+        onSaveCrate={(updatedCrate: JSONObject) => console.log("+++ onSaveCrate", updatedCrate)}
+        onNavigation={entity => console.log("+++ onNavigation", entity)}
+        enableInternalRouting={false}
+      />
     </>
   )
 }
