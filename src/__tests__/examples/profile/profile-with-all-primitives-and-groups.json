@@ -1,0 +1,214 @@
+{
+    "metadata": {
+        "name": "A profile with all primitives and groups",
+        "description": "A profile with entries for each of the supported datatypes",
+        "version": 0.1,
+        "warnMissingProperty": true
+    },
+    "context": "https://w3id.org/ro/crate/1.1/context",
+    "layouts": [
+        {
+            "appliesTo": ["Dataset"],
+            "about": { "label": "About", "description": "" },
+            "spatio-temporal": { "label": "Spatio-Temporal", "description": "" },
+            "numbers": { "label": "Numbers", "description": "" },
+            "select": {
+                "label": "select",
+                "description": ""
+            },
+            "overflow": {
+                "label": "Other"
+            }
+        }
+    ],
+    "classes": {
+        "Dataset": {
+            "definition": "override",
+            "subClassOf": [],
+            "inputs": [
+                {
+                    "id": "https://schema.org/author",
+                    "name": "author",
+                    "label": "Author",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["Person", "Organisation"],
+                    "group": "about"
+                },
+                {
+                    "id": "https://schema.org/text",
+                    "name": "text",
+                    "label": "text",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": false,
+                    "type": ["Text"],
+                    "group": "about"
+                },
+                {
+                    "id": "https://schema.org/textarea",
+                    "name": "textarea",
+                    "label": "textarea",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["TextArea"],
+                    "readonly": true,
+                    "group": "about"
+                },
+                {
+                    "id": "https://schema.org/url",
+                    "name": "url",
+                    "label": "url",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["URL"],
+                    "group": "about"
+                },
+                {
+                    "id": "https://schema.org/date",
+                    "name": "date",
+                    "label": "date",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["Date"],
+                    "group": "spatio-temporal"
+                },
+                {
+                    "id": "https://schema.org/datetime",
+                    "name": "datetime",
+                    "label": "datetime",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["DateTime"],
+                    "group": "spatio-temporal"
+                },
+                {
+                    "id": "https://schema.org/time",
+                    "name": "time",
+                    "label": "time",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["Time"],
+                    "group": "spatio-temporal"
+                },
+                {
+                    "id": "https://schema.org/number",
+                    "name": "number",
+                    "label": "number",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["Number"],
+                    "group": "numbers"
+                },
+                {
+                    "id": "https://schema.org/float",
+                    "name": "float",
+                    "label": "float",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["Float"],
+                    "group": "numbers"
+                },
+                {
+                    "id": "https://schema.org/integer",
+                    "name": "integer",
+                    "label": "integer",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["Integer"],
+                    "group": "numbers"
+                },
+                {
+                    "id": "http://schema.org/select",
+                    "name": "select",
+                    "help": "select",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["Select"],
+                    "values": [
+                        "Yes = in copyright",
+                        "No - out of copyright",
+                        "Public Domain",
+                        "Copyright conditions may apply",
+                        "Copyright holder(s) authority"
+                    ],
+                    "group": "select"
+                },
+                {
+                    "id": "http://schema.org/selecturl",
+                    "name": "selectUrl",
+                    "label": "selectUrl",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["SelectURL"],
+                    "values": ["http://schema.org/name", "arcp://name,...."],
+                    "group": "select"
+                },
+                {
+                    "id": "http://schema.org/selectobject",
+                    "name": "selectObject",
+                    "label": "selectObject",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["SelectObject"],
+                    "values": [
+                        { "@id": "#one", "@type": "Dataset", "name": "one" },
+                        { "@id": "#two", "@type": "Dataset", "name": "two" },
+                        { "@id": "#three", "@type": "Dataset", "name": "three" }
+                    ],
+                    "group": "select"
+                },
+                {
+                    "id": "http://schema.org/geo",
+                    "name": "geo",
+                    "label": "geo",
+                    "help": "help message",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["Geo"],
+                    "group": "spatio-temporal"
+                }
+            ]
+        },
+        "Person": {
+            "definition": "inherit",
+            "subClassOf": [],
+            "inputs": [
+                {
+                    "id": "https://schema.org/name",
+                    "name": "name",
+                    "label": "name",
+                    "help": "The name the person",
+                    "required": true,
+                    "multiple": false,
+                    "type": ["Text"]
+                }
+            ]
+        },
+        "Organisation": {
+            "definition": "override",
+            "subClassOf": [],
+            "inputs": [
+                {
+                    "id": "https://schema.org/name",
+                    "name": "name",
+                    "label": "name",
+                    "help": "The name of the organisation",
+                    "required": true,
+                    "multiple": false,
+                    "type": ["Text"]
+                }
+            ]
+        }
+    }
+}

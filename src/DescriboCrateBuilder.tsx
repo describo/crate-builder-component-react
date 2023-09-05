@@ -10,7 +10,6 @@ import DescriboCrateBuilderVue from "@describo/crate-builder-component";
 import "@describo/crate-builder-component/dist/vue/style.css";
 
 function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
-  debugger;
   // The element we mount onto
   const containerRef = useRef(null);
 

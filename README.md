@@ -18,8 +18,8 @@ yarn add @describo/crate-builder-component-react
 
 ```tsx
 import React, {useState} from 'react';
-import {DescriboCrateBuilder} from "@describo/crate-builder-component-react";
-import {JSONObject} from "@describo/crate-builder-component-react/lib/DescriboCrateBuilder";
+import {DescriboCrateBuilder, JSONObject} from "@describo/crate-builder-component-react";
+import "@describo/crate-builder-component-react/style.css";
 
 const exampleCrate = {
   "@context": "https://w3id.org/ro/crate/1.1/context",
@@ -45,7 +45,7 @@ function App() {
   const [crate, setCrate] = useState<JSONObject>(exampleCrate)
   return (
     <>
-      <DescriboCrateBuilder crate={exampleCrate} onSaveCrate={(updatedCrate) => setCrate(updatedCrate)} />
+      <DescriboCrateBuilder crate={exampleCrate} onSaveCrate={(crateValue) => setCrate(crateValue.crate)} />
       <pre>
         {JSON.stringify(crate, null, 2)}
       </pre>
@@ -63,12 +63,29 @@ _Note: in the example above we set the inital value of the crate from `exampleCr
 To try the component you can use the included storybook:
 
 ```
-yarn
-yarn storybook
+npm i
+npm run storybook
 ```
 
-# Caveats
+# CSS customization of the crate builder
 
-The wrapper uses the web component build of [Vuejs Crate Builder Component](https://github.com/describo/crate-builder-component), which has a number of shortcomings. For example, web components only allow passing string, numeric and boolean parameters, which means you cannot pass an object or a callback functions. To work around this we save the configurations for the Vue component in a variable like `globalThis.DescriboCrateBuilderConfiguration_XXXX` (where XXXX is a random suffix) and notify the Vue component when contents of this object gets updated.
+You can customize some aspects of the crate builder by overriding CSS of various elements. For example, to make the
+layout tab texts smaller and green you can create a `styles.css`:
 
-Vue's web component compiler also has its problems, like [this](https://github.com/vuejs/core/issues/4662) long-standing issue with inlining styles. We provide work arounds for this issue, but it comes with some (negligable) performance hit. 
+```css
+.el-tabs__header * {
+    font-size: 1rem;
+    color: forestgreen;
+}
+```
+
+and use it in `App.tsx` like this:
+
+```tsx
+import React, {useState} from 'react';
+import {DescriboCrateBuilder, JSONObject} from "@describo/crate-builder-component-react";
+import "@describo/crate-builder-component-react/style.css";
+import "./styles.css";
+
+...
+```
