@@ -1,21 +1,31 @@
 import {Meta, StoryFn} from "@storybook/react";
 import CustomMDXDocumentation from './Documentation.mdx';
 import DescriboCrateBuilder from "../DescriboCrateBuilder";
-import crateTestData from "./examples/simple-ro-crate-metadata.json"
-import crateFile1 from "./examples/item/empty/ro-crate-metadata.json";
-import crateFile2 from "./examples/item/complex-collection/ro-crate-metadata.json";
-import crateFile3 from "./examples/item/complex-item/ro-crate-metadata.json";
-import crateFile4 from "./examples/item/large-crate/ro-crate-metadata.json";
-import profile1 from "./examples/profile/profile-to-test-multiple-types.json";
-import profile2 from "./examples/profile/profile-with-all-primitives.json";
-import profile3 from "./examples/profile/profile-with-all-primitives-and-groups.json";
-import profile4 from "./examples/profile/nyingarn-item-profile.json";
-import profile5 from "./examples/profile/citation.profile.json";
-import profile6 from "./examples/profile/dv.json";
+import crateSimple from "./examples/simple-ro-crate-metadata.json"
+import crateEmpty from "./examples/item/empty/ro-crate-metadata.json";
+import crateComplexCollection from "./examples/item/complex-collection/ro-crate-metadata.json";
+import crateComplexItem from "./examples/item/complex-item/ro-crate-metadata.json";
+import crateLarge from "./examples/item/large-crate/ro-crate-metadata.json";
+import profileMultipleTypes from "./examples/profile/profile-to-test-multiple-types.json";
+import profileAllPrimitives from "./examples/profile/profile-with-all-primitives.json";
+import profileAllPrimitivesNoGroups from "./examples/profile/profile-with-all-primitives-and-groups.json";
+import profileNyingarn from "./examples/profile/nyingarn-item-profile.json";
+import profileCitation from "./examples/profile/citation.profile.json";
+import profileAroma from "./examples/profile/aroma.profile.json";
 import {DescriboCrateBuilderProps} from "../types";
 
+
+// Create a master template for mapping args to render the DescriboCrateBuilder component
+const Template: StoryFn<typeof DescriboCrateBuilder> = (args) => {
+  return <>
+    <DescriboCrateBuilder {...args} />
+  </>
+}
+
 const emptyProfile = {}
-const profiles = { emptyProfile, profile1, profile2, profile3, profile4, profile5, profile6};
+const profiles = { emptyProfile, profileMultipleTypes, profileAllPrimitives, profileAllPrimitivesNoGroups, profileNyingarn, profileCitation, profileAroma};
+const crates = { crateEmpty, crateSimple, crateComplexCollection, crateComplexItem, crateLarge};
+
 
 export default {
   title: "Describo Crate Builder",
@@ -26,7 +36,25 @@ export default {
     },
   },
   argTypes: {
-    crate: { control: 'object'  },
+    crate: {
+      options: Object.keys(crates), // An array of serializable values
+      mapping: crates, // Maps serializable option values to complex arg values
+      control: {
+        type: 'select',
+        labels : {
+          crateEmpty: "Empty",
+          crateSimple: "Simple",
+          crateComplexCollection: "Complex collection",
+          crateComplexItem: "Complex item",
+          crateLarge: "Large",
+        },
+      },
+      table: {
+        type: { summary: 'select' },
+        defaultValue: { summary: 'Simple' },
+      },
+
+    },
     profile: {
       options: Object.keys(profiles), // An array of serializable values
       mapping: profiles, // Maps serializable option values to complex arg values
@@ -35,12 +63,12 @@ export default {
         type: 'select',
         labels : {
           emptyProfile: "Empty",
-          profile1: profile1.metadata.name,
-          profile2: profile2.metadata.name,
-          profile3: profile3.metadata.name,
-          profile4: profile4.metadata.name,
-          profile5: profile5.metadata.name,
-          profile6: profile6.metadata.name,
+          profileMultipleTypes: profileMultipleTypes.metadata.name,
+          profileAllPrimitives: profileAllPrimitives.metadata.name,
+          profileAllPrimitivesNoGroups: profileAllPrimitivesNoGroups.metadata.name,
+          profileNyingarn: profileNyingarn.metadata.name,
+          profileCitation: profileCitation.metadata.name,
+          profileAroma: profileAroma.metadata.name
         }
       },
     },
@@ -55,67 +83,24 @@ export default {
   },
 } as Meta<typeof DescriboCrateBuilder>;
 
-// Create a master template for mapping args to render the DescriboCrateBuilder component
-const Template: StoryFn<typeof DescriboCrateBuilder> = (args) => <>
 
-  <DescriboCrateBuilder {...args} />
-  </>
-
-export const Simple = Template.bind({});
-Simple.args = {
-  crate: crateTestData,
-}
-
-export const Blank = Template.bind({});
-Blank.args = {
-  crate: crateFile1,
-  enableCratePreview: false,
-}
-
-export const ComplexCollection = Template.bind({});
-ComplexCollection.args = {
-  crate: crateFile2,
-  enableCratePreview: true,
-}
-
-export const ComplexItem = Template.bind({});
-ComplexItem.args = {
-  crate: crateFile3
-}
-
-export const LargeCrate = Template.bind({});
-LargeCrate.args = {
-  crate: crateFile4
-}
-
-export const Readonly = Template.bind({});
-Readonly.args = {
-  crate: crateFile2,
-  readonly: true
-}
-
-export const NoLinkBrowser = Template.bind({});
-NoLinkBrowser.args = {
-  crate: crateFile2,
-  enableReverseLinkBrowser: false,
-  enableContextEditor: false,
-  enableCratePreview: false,
-  enableBrowseEntities: false,
-}
-
-export const EveryProp = Template.bind({});
-EveryProp.args = {
-  crate: crateFile2,
+export const CompleteExample = Template.bind({});
+CompleteExample.args = {
+  crate: crateSimple,
   profile: emptyProfile,
   showControls: true,
   enableReverseLinkBrowser: true,
   enableContextEditor: true,
   enableCratePreview: true,
   enableBrowseEntities: true,
-  entityId: "./",
+  entityId: "", // Setting to "./" would not allow changing the crate now https://github.com/describo/crate-builder-component/issues/68
   enableInternalRouting: true,
   readonly: false,
   language: "en",
-  tabLocation: "left"
+  tabLocation: "left",
+  onReady: () => console.log("onReady called"),
+  onSaveCrate: (crateData) => console.log("onSaveCrate called: ", crateData),
+  onNavigation: (navData) => console.log("onNavigation called: ", navData),
+  onError: (error) => console.log("onError called: ", error),
 } as DescriboCrateBuilderProps
 

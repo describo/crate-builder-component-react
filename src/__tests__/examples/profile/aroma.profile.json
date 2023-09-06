@@ -1,0 +1,2989 @@
+{
+  "metadata": {
+    "name": "Complex AROMA profile"
+  },
+  "classes": {
+    "Dataset": {
+      "inputs": [
+        {
+          "id": "http://schema.org/hasPart",
+          "name": "hasPart",
+          "label": "Has Part",
+          "help": "Part of a Dataset",
+          "multiple": "true",
+          "type": [
+            "Dataset",
+            "File"
+          ]
+        },
+        {
+          "id": "http://purl.org/dc/terms/title",
+          "name": "title",
+          "label": "Title",
+          "help": "The main title of the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": true,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/subtitle",
+          "name": "subtitle",
+          "label": "Subtitle",
+          "help": "A secondary title that amplifies or states certain limitations on the main title",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "http://purl.org/dc/terms/alternative",
+          "name": "alternativeTitle",
+          "label": "Alternative Title",
+          "help": "Either 1) a title commonly used to refer to the Dataset or 2) an abbreviation of the main title",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://schema.org/distribution",
+          "name": "alternativeURL",
+          "label": "Alternative URL",
+          "help": "Another URL where one can view or access the data in the Dataset, e.g. a project or personal webpage",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/otherId",
+          "name": "otherId",
+          "label": "Other Identifier",
+          "help": "Another unique identifier for the Dataset (e.g. producer's or another repository's identifier)",
+          "type": [
+            "otherId"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "http://purl.org/dc/terms/creator",
+          "name": "author",
+          "label": "Author",
+          "help": "The entity, e.g. a person or organization, that created the Dataset",
+          "type": [
+            "author"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/datasetContact",
+          "name": "datasetContact",
+          "label": "Point of Contact",
+          "help": "The entity, e.g. a person or organization, that users of the Dataset can contact with questions",
+          "type": [
+            "datasetContact"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/dsDescription",
+          "name": "dsDescription",
+          "label": "Description",
+          "help": "A summary describing the purpose, nature, and scope of the Dataset",
+          "type": [
+            "dsDescription"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "http://purl.org/dc/terms/subject",
+          "name": "subject",
+          "label": "Subject",
+          "help": "The area of study relevant to the Dataset",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "Agricultural Sciences",
+            "Arts and Humanities",
+            "Astronomy and Astrophysics",
+            "Business and Management",
+            "Chemistry",
+            "Computer and Information Science",
+            "Earth and Environmental Sciences",
+            "Engineering",
+            "Law",
+            "Mathematical Sciences",
+            "Medicine, Health and Life Sciences",
+            "Physics",
+            "Social Sciences",
+            "Other"
+          ],
+          "required": true,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/keyword",
+          "name": "keyword",
+          "label": "Keyword",
+          "help": "A key term that describes an important aspect of the Dataset and information about any controlled vocabulary used",
+          "type": [
+            "keyword"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/topicClassification",
+          "name": "topicClassification",
+          "label": "Topic Classification",
+          "help": "Indicates a broad, important topic or subject that the Dataset covers and information about any controlled vocabulary used",
+          "type": [
+            "topicClassification"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "http://purl.org/dc/terms/isReferencedBy",
+          "name": "publication",
+          "label": "Related Publication",
+          "help": "The article or report that uses the data in the Dataset. The full list of related publications will be displayed on the metadata tab",
+          "type": [
+            "publication"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/notesText",
+          "name": "notesText",
+          "label": "Notes",
+          "help": "Additional information about the Dataset",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "http://purl.org/dc/terms/language",
+          "name": "language",
+          "label": "Language",
+          "help": "A language that the Dataset's files is written in",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "Abkhaz",
+            "Afar",
+            "Afrikaans",
+            "Akan",
+            "Albanian",
+            "Amharic",
+            "Arabic",
+            "Aragonese",
+            "Armenian",
+            "Assamese",
+            "Avaric",
+            "Avestan",
+            "Aymara",
+            "Azerbaijani",
+            "Bambara",
+            "Bashkir",
+            "Basque",
+            "Belarusian",
+            "Bengali, Bangla",
+            "Bihari",
+            "Bislama",
+            "Bosnian",
+            "Breton",
+            "Bulgarian",
+            "Burmese",
+            "Catalan,Valencian",
+            "Chamorro",
+            "Chechen",
+            "Chichewa, Chewa, Nyanja",
+            "Chinese",
+            "Chuvash",
+            "Cornish",
+            "Corsican",
+            "Cree",
+            "Croatian",
+            "Czech",
+            "Danish",
+            "Divehi, Dhivehi, Maldivian",
+            "Dutch",
+            "Dzongkha",
+            "English",
+            "Esperanto",
+            "Estonian",
+            "Ewe",
+            "Faroese",
+            "Fijian",
+            "Finnish",
+            "French",
+            "Fula, Fulah, Pulaar, Pular",
+            "Galician",
+            "Georgian",
+            "German",
+            "Greek (modern)",
+            "Guaraní",
+            "Gujarati",
+            "Haitian, Haitian Creole",
+            "Hausa",
+            "Hebrew (modern)",
+            "Herero",
+            "Hindi",
+            "Hiri Motu",
+            "Hungarian",
+            "Interlingua",
+            "Indonesian",
+            "Interlingue",
+            "Irish",
+            "Igbo",
+            "Inupiaq",
+            "Ido",
+            "Icelandic",
+            "Italian",
+            "Inuktitut",
+            "Japanese",
+            "Javanese",
+            "Kalaallisut, Greenlandic",
+            "Kannada",
+            "Kanuri",
+            "Kashmiri",
+            "Kazakh",
+            "Khmer",
+            "Kikuyu, Gikuyu",
+            "Kinyarwanda",
+            "Kyrgyz",
+            "Komi",
+            "Kongo",
+            "Korean",
+            "Kurdish",
+            "Kwanyama, Kuanyama",
+            "Latin",
+            "Luxembourgish, Letzeburgesch",
+            "Ganda",
+            "Limburgish, Limburgan, Limburger",
+            "Lingala",
+            "Lao",
+            "Lithuanian",
+            "Luba-Katanga",
+            "Latvian",
+            "Manx",
+            "Macedonian",
+            "Malagasy",
+            "Malay",
+            "Malayalam",
+            "Maltese",
+            "Māori",
+            "Marathi (Marāṭhī)",
+            "Marshallese",
+            "Mixtepec Mixtec",
+            "Mongolian",
+            "Nauru",
+            "Navajo, Navaho",
+            "Northern Ndebele",
+            "Nepali",
+            "Ndonga",
+            "Norwegian Bokmål",
+            "Norwegian Nynorsk",
+            "Norwegian",
+            "Nuosu",
+            "Southern Ndebele",
+            "Occitan",
+            "Ojibwe, Ojibwa",
+            "Old Church Slavonic,Church Slavonic,Old Bulgarian",
+            "Oromo",
+            "Oriya",
+            "Ossetian, Ossetic",
+            "Panjabi, Punjabi",
+            "Pāli",
+            "Persian (Farsi)",
+            "Polish",
+            "Pashto, Pushto",
+            "Portuguese",
+            "Quechua",
+            "Romansh",
+            "Kirundi",
+            "Romanian",
+            "Russian",
+            "Sanskrit (Saṁskṛta)",
+            "Sardinian",
+            "Sindhi",
+            "Northern Sami",
+            "Samoan",
+            "Sango",
+            "Serbian",
+            "Scottish Gaelic, Gaelic",
+            "Shona",
+            "Sinhala, Sinhalese",
+            "Slovak",
+            "Slovene",
+            "Somali",
+            "Southern Sotho",
+            "Spanish, Castilian",
+            "Sundanese",
+            "Swahili",
+            "Swati",
+            "Swedish",
+            "Tamil",
+            "Telugu",
+            "Tajik",
+            "Thai",
+            "Tigrinya",
+            "Tibetan Standard, Tibetan, Central",
+            "Turkmen",
+            "Tagalog",
+            "Tswana",
+            "Tonga (Tonga Islands)",
+            "Turkish",
+            "Tsonga",
+            "Tatar",
+            "Twi",
+            "Tahitian",
+            "Uyghur, Uighur",
+            "Ukrainian",
+            "Urdu",
+            "Uzbek",
+            "Venda",
+            "Vietnamese",
+            "Volapük",
+            "Walloon",
+            "Welsh",
+            "Wolof",
+            "Western Frisian",
+            "Xhosa",
+            "Yiddish",
+            "Yoruba",
+            "Zhuang, Chuang",
+            "Zulu",
+            "Not applicable"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/producer",
+          "name": "producer",
+          "label": "Producer",
+          "help": "The entity, such a person or organization, managing the finances or other administrative processes involved in the creation of the Dataset",
+          "type": [
+            "producer"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/productionDate",
+          "name": "productionDate",
+          "label": "Production Date",
+          "help": "The date when the data were produced (not distributed, published, or archived)",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/productionPlace",
+          "name": "productionPlace",
+          "label": "Production Location",
+          "help": "The location where the data and any related materials were produced or collected",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "http://purl.org/dc/terms/contributor",
+          "name": "contributor",
+          "label": "Contributor",
+          "help": "The entity, such as a person or organization, responsible for collecting, managing, or otherwise contributing to the development of the Dataset",
+          "type": [
+            "contributor"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://schema.org/sponsor",
+          "name": "grantNumber",
+          "label": "Funding Information",
+          "help": "Information about the Dataset's financial support",
+          "type": [
+            "grantNumber"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributor",
+          "name": "distributor",
+          "label": "Distributor",
+          "help": "The entity, such as a person or organization, designated to generate copies of the Dataset, including any editions or revisions",
+          "type": [
+            "distributor"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributionDate",
+          "name": "distributionDate",
+          "label": "Distribution Date",
+          "help": "The date when the Dataset was made available for distribution/presentation",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/depositor",
+          "name": "depositor",
+          "label": "Depositor",
+          "help": "The entity, such as a person or organization, that deposited the Dataset in the repository",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "http://purl.org/dc/terms/dateSubmitted",
+          "name": "dateOfDeposit",
+          "label": "Deposit Date",
+          "help": "The date when the Dataset was deposited into the repository",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://schema.org/temporalCoverage",
+          "name": "timePeriodCovered",
+          "label": "Time Period",
+          "help": "The time period that the data refer to. Also known as span. This is the time period covered by the data, not the dates of coding, collecting data, or making documents machine-readable",
+          "type": [
+            "timePeriodCovered"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/dateOfCollection",
+          "name": "dateOfCollection",
+          "label": "Date of Collection",
+          "help": "The dates when the data were collected or generated",
+          "type": [
+            "dateOfCollection"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "http://rdf-vocabulary.ddialliance.org/discovery#kindOfData",
+          "name": "kindOfData",
+          "label": "Data Type",
+          "help": "The type of data included in the files (e.g. survey data, clinical data, or machine-readable text)",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/series",
+          "name": "series",
+          "label": "Series",
+          "help": "Information about the dataset series to which the Dataset belong",
+          "type": [
+            "series"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://www.w3.org/TR/prov-o/#wasGeneratedBy",
+          "name": "software",
+          "label": "Software",
+          "help": "Information about the software used to generate the Dataset",
+          "type": [
+            "software"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/relatedMaterial",
+          "name": "relatedMaterial",
+          "label": "Related Material",
+          "help": "Information, such as a persistent ID or citation, about the material related to the Dataset, such as appendices or sampling information available outside of the Dataset",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "http://purl.org/dc/terms/relation",
+          "name": "relatedDatasets",
+          "label": "Related Dataset",
+          "help": "Information, such as a persistent ID or citation, about a related dataset, such as previous research on the Dataset's subject",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "http://purl.org/dc/terms/references",
+          "name": "otherReferences",
+          "label": "Other Reference",
+          "help": "Information, such as a persistent ID or citation, about another type of resource that provides background or supporting material to the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://www.w3.org/TR/prov-o/#wasDerivedFrom",
+          "name": "dataSources",
+          "label": "Data Source",
+          "help": "Information, such as a persistent ID or citation, about sources of the Dataset (e.g. a book, article, serial, or machine-readable data file)",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/originOfSources",
+          "name": "originOfSources",
+          "label": "Origin of Historical Sources",
+          "help": "For historical sources, the origin and any rules followed in establishing them as sources",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/characteristicOfSources",
+          "name": "characteristicOfSources",
+          "label": "Characteristic of Sources",
+          "help": "Characteristics not already noted elsewhere",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/accessToSources",
+          "name": "accessToSources",
+          "label": "Documentation and Access to Sources",
+          "help": "1) Methods or procedures for accessing data sources and 2) any special permissions needed for access",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Citation"
+        },
+        {
+          "id": "https://dataverse.org/schema/journal/journalVolumeIssue",
+          "name": "journalVolumeIssue",
+          "label": "Journal",
+          "help": "Indicates the volume, issue and date of a journal, which this Dataset is associated with.",
+          "type": [
+            "journalVolumeIssue"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Journal"
+        },
+        {
+          "id": "https://dataverse.org/schema/journal/journalArticleType",
+          "name": "journalArticleType",
+          "label": "Type of Article",
+          "help": "Indicates what kind of article this is, for example, a research article, a commentary, a book or product review, a case report, a calendar, etc (based on JATS). ",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "reprint",
+            "research article",
+            "retraction",
+            "review article",
+            "translation",
+            "other",
+            "rapid communication",
+            "reply",
+            "abstract",
+            "addendum",
+            "announcement",
+            "article-commentary",
+            "book review",
+            "books received",
+            "brief report",
+            "calendar",
+            "case report",
+            "collection",
+            "correction",
+            "data paper",
+            "discussion",
+            "dissertation",
+            "editorial",
+            "in brief",
+            "introduction",
+            "letter",
+            "meeting report",
+            "news",
+            "obituary",
+            "oration",
+            "partial retraction",
+            "product review"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Journal"
+        },
+        {
+          "id": "https://dataverse.org/schema/geospatial/geographicCoverage",
+          "name": "geographicCoverage",
+          "label": "Geographic Coverage",
+          "help": "Information on the geographic coverage of the data. Includes the total geographic scope of the data.",
+          "type": [
+            "geographicCoverage"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Geospatial"
+        },
+        {
+          "id": "https://dataverse.org/schema/geospatial/geographicUnit",
+          "name": "geographicUnit",
+          "label": "Geographic Unit",
+          "help": "Lowest level of geographic aggregation covered by the Dataset, e.g., village, county, region.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Geospatial"
+        },
+        {
+          "id": "https://dataverse.org/schema/geospatial/geographicBoundingBox",
+          "name": "geographicBoundingBox",
+          "label": "Geographic Bounding Box",
+          "help": "The fundamental geometric description for any Dataset that models geography is the geographic bounding box. It describes the minimum box, defined by west and east longitudes and north and south latitudes, which includes the largest geographic extent of the  Dataset's geographic coverage. This element is used in the first pass of a coordinate-based search. Inclusion of this element in the codebook is recommended, but is required if the bound polygon box is included. ",
+          "type": [
+            "geographicBoundingBox"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Geospatial"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/unitOfAnalysis",
+          "name": "unitOfAnalysis",
+          "label": "Unit of Analysis",
+          "help": "Basic unit of analysis or observation that this Dataset describes, such as individuals, families/households, groups, institutions/organizations, administrative units, and more. For information about the DDI's controlled vocabulary for this element, please refer to the DDI web page at http://www.ddialliance.org/controlled-vocabularies.",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/universe",
+          "name": "universe",
+          "label": "Universe",
+          "help": "Description of the population covered by the data in the file; the group of people or other elements that are the object of the study and to which the study results refer. Age, nationality, and residence commonly help to  delineate a given universe, but any number of other factors may be used, such as age limits, sex, marital status, race, ethnic group, nationality, income, veteran status, criminal convictions, and more. The universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, and so on. In general, it should be possible to tell from the description of the universe whether a given individual or element is a member of the population under study. Also known as the universe of interest, population of interest, and target population.",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/timeMethod",
+          "name": "timeMethod",
+          "label": "Time Method",
+          "help": "The time method or time dimension of the data collection, such as panel, cross-sectional, trend, time- series, or other.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/dataCollector",
+          "name": "dataCollector",
+          "label": "Data Collector",
+          "help": "Individual, agency or organization responsible for  administering the questionnaire or interview or compiling the data.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/collectorTraining",
+          "name": "collectorTraining",
+          "label": "Collector Training",
+          "help": "Type of training provided to the data collector",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/frequencyOfDataCollection",
+          "name": "frequencyOfDataCollection",
+          "label": "Frequency",
+          "help": "If the data collected includes more than one point in time, indicate the frequency with which the data was collected; that is, monthly, quarterly, or other.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/samplingProcedure",
+          "name": "samplingProcedure",
+          "label": "Sampling Procedure",
+          "help": "Type of sample and sample design used to select the survey respondents to represent the population. May include reference to the target sample size and the sampling fraction.",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/targetSampleSize",
+          "name": "targetSampleSize",
+          "label": "Target Sample Size",
+          "help": "Specific information regarding the target sample size, actual  sample size, and the formula used to determine this.",
+          "type": [
+            "targetSampleSize"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/deviationsFromSampleDesign",
+          "name": "deviationsFromSampleDesign",
+          "label": "Major Deviations for Sample Design",
+          "help": "Show correspondence as well as discrepancies between the sampled units (obtained) and available statistics for the population (age, sex-ratio, marital status, etc.) as a whole.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/collectionMode",
+          "name": "collectionMode",
+          "label": "Collection Mode",
+          "help": "Method used to collect the data; instrumentation characteristics (e.g., telephone interview, mail questionnaire, or other).",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/researchInstrument",
+          "name": "researchInstrument",
+          "label": "Type of Research Instrument",
+          "help": "Type of data collection instrument used. Structured indicates an instrument in which all respondents are asked the same questions/tests, possibly with precoded answers. If a small portion of such a questionnaire includes open-ended questions, provide appropriate comments. Semi-structured indicates that the research instrument contains mainly open-ended questions. Unstructured indicates that in-depth interviews were conducted.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/dataCollectionSituation",
+          "name": "dataCollectionSituation",
+          "label": "Characteristics of Data Collection Situation",
+          "help": "Description of noteworthy aspects of the data collection situation. Includes information on factors such as cooperativeness of respondents, duration of interviews, number of call backs, or similar.",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/actionsToMinimizeLoss",
+          "name": "actionsToMinimizeLoss",
+          "label": "Actions to Minimize Losses",
+          "help": "Summary of actions taken to minimize data loss. Include information on actions such as follow-up visits, supervisory checks, historical matching, estimation, and so on.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/controlOperations",
+          "name": "controlOperations",
+          "label": "Control Operations",
+          "help": "Control OperationsMethods to facilitate data control performed by the primary investigator or by the data archive.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/weighting",
+          "name": "weighting",
+          "label": "Weighting",
+          "help": "The use of sampling procedures might make it necessary to apply weights to produce accurate statistical results. Describes the criteria for using weights in analysis of a collection. If a weighting formula or coefficient was developed, the formula is provided, its elements are defined, and it is indicated how the formula was applied to the data.",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/cleaningOperations",
+          "name": "cleaningOperations",
+          "label": "Cleaning Operations",
+          "help": "Methods used to clean the data collection, such as consistency checking, wildcode checking, or other.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/datasetLevelErrorNotes",
+          "name": "datasetLevelErrorNotes",
+          "label": "Study Level Error Notes",
+          "help": "Note element used for any information annotating or clarifying the methodology and processing of the study. ",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/responseRate",
+          "name": "responseRate",
+          "label": "Response Rate",
+          "help": "Percentage of sample members who provided information.",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/samplingErrorEstimates",
+          "name": "samplingErrorEstimates",
+          "label": "Estimates of Sampling Error",
+          "help": "Measure of how precisely one can estimate a population value from a given sample.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/otherDataAppraisal",
+          "name": "otherDataAppraisal",
+          "label": "Other Forms of Data Appraisal",
+          "help": "Other issues pertaining to the data appraisal. Describe issues such as response variance, nonresponse rate  and testing for bias, interviewer and response bias, confidence levels, question bias, or similar.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/socialScienceNotes",
+          "name": "socialScienceNotes",
+          "label": "Notes",
+          "help": "General notes about this Dataset.",
+          "type": [
+            "socialScienceNotes"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Social Science and Humanities"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/astroType",
+          "name": "astroType",
+          "label": "Type",
+          "help": "The nature or genre of the content of the files in the dataset.",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "Image",
+            "Mosaic",
+            "EventList",
+            "Spectrum",
+            "Cube",
+            "Table",
+            "Catalog",
+            "LightCurve",
+            "Simulation",
+            "Figure",
+            "Artwork",
+            "Animation",
+            "PrettyPicture",
+            "Documentation",
+            "Other",
+            "Library",
+            "Press Release",
+            "Facsimile",
+            "Historical",
+            "Observation",
+            "Object",
+            "Value",
+            "ValuePair",
+            "Survey"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/astroFacility",
+          "name": "astroFacility",
+          "label": "Facility",
+          "help": "The observatory or facility where the data was obtained. ",
+          "type": [
+            "Select"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/astroInstrument",
+          "name": "astroInstrument",
+          "label": "Instrument",
+          "help": "The instrument used to collect the data.",
+          "type": [
+            "Select"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/astroObject",
+          "name": "astroObject",
+          "label": "Object",
+          "help": "Astronomical Objects represented in the data (Given as SIMBAD recognizable names preferred).",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/resolution.Spatial",
+          "name": "resolution:Spatial",
+          "label": "Spatial Resolution",
+          "help": "The spatial (angular) resolution that is typical of the observations, in decimal degrees.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/resolution.Spectral",
+          "name": "resolution:Spectral",
+          "label": "Spectral Resolution",
+          "help": "The spectral resolution that is typical of the observations, given as the ratio \\u03bb/\\u0394\\u03bb.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/resolution.Temporal",
+          "name": "resolution:Temporal",
+          "label": "Time Resolution",
+          "help": "The temporal resolution that is typical of the observations, given in seconds.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Spectral.Bandpass",
+          "name": "coverage:Spectral:Bandpass",
+          "label": "Bandpass",
+          "help": "Conventional bandpass name",
+          "type": [
+            "Select"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Spectral.CentralWavelength",
+          "name": "coverage:Spectral:CentralWavelength",
+          "label": "Central Wavelength (m)",
+          "help": "The central wavelength of the spectral bandpass, in meters.",
+          "type": [
+            "Number"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Spectral.Wavelength",
+          "name": "coverage:Spectral:Wavelength",
+          "label": "Wavelength Range",
+          "help": "The minimum and maximum wavelength of the spectral bandpass.",
+          "type": [
+            "coverage:Spectral:Wavelength"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Temporal",
+          "name": "coverage:Temporal",
+          "label": "Dataset Date Range",
+          "help": " Time period covered by the data.",
+          "type": [
+            "coverage:Temporal"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Spatial",
+          "name": "coverage:Spatial",
+          "label": "Sky Coverage",
+          "help": "The sky coverage of the data object.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Depth",
+          "name": "coverage:Depth",
+          "label": "Depth Coverage",
+          "help": "The (typical) depth coverage, or sensitivity, of the data object in Jy.",
+          "type": [
+            "Number"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.ObjectDensity",
+          "name": "coverage:ObjectDensity",
+          "label": "Object Density",
+          "help": "The (typical) density of objects, catalog entries, telescope pointings, etc., on the sky, in number per square degree.",
+          "type": [
+            "Number"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.ObjectCount",
+          "name": "coverage:ObjectCount",
+          "label": "Object Count",
+          "help": "The total number of objects, catalog entries, etc., in the data object.",
+          "type": [
+            "Number"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.SkyFraction",
+          "name": "coverage:SkyFraction",
+          "label": "Fraction of Sky",
+          "help": "The fraction of the sky represented in the observations, ranging from 0 to 1.",
+          "type": [
+            "Number"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Polarization",
+          "name": "coverage:Polarization",
+          "label": "Polarization",
+          "help": "The polarization coverage",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/redshiftType",
+          "name": "redshiftType",
+          "label": "RedshiftType",
+          "help": "RedshiftType string C \"Redshift\"; or \"Optical\" or \"Radio\" definitions of Doppler velocity used in the data object.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/resolution.Redshift",
+          "name": "resolution:Redshift",
+          "label": "Redshift Resolution",
+          "help": "The resolution in redshift (unitless) or Doppler velocity (km/s) in the data object.",
+          "type": [
+            "Number"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.RedshiftValue",
+          "name": "coverage:RedshiftValue",
+          "label": "Redshift Value",
+          "help": "The value of the redshift (unitless) or Doppler velocity (km/s in the data object.",
+          "type": [
+            "coverage:RedshiftValue"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Astronomy and Astrophysics"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyDesignType",
+          "name": "studyDesignType",
+          "label": "Design Type",
+          "help": "Design types that are based on the overall experimental design.",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "Case Control",
+            "Cross Sectional",
+            "Cohort Study",
+            "Nested Case Control Design",
+            "Not Specified",
+            "Parallel Group Design",
+            "Perturbation Design",
+            "Randomized Controlled Trial",
+            "Technological Design",
+            "Other"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyOtherDesignType",
+          "name": "studyOtherDesignType",
+          "label": "Other Design Type",
+          "help": "If Other was selected in Design Type, list any other design types that were used in this Dataset.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyFactorType",
+          "name": "studyFactorType",
+          "label": "Factor Type",
+          "help": "Factors used in the Dataset.",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "Age",
+            "Biomarkers",
+            "Cell Surface Markers",
+            "Cell Type/Cell Line",
+            "Developmental Stage",
+            "Disease State",
+            "Drug Susceptibility",
+            "Extract Molecule",
+            "Genetic Characteristics",
+            "Immunoprecipitation Antibody",
+            "Organism",
+            "Passages",
+            "Platform",
+            "Sex",
+            "Strain",
+            "Time Point",
+            "Tissue Type",
+            "Treatment Compound",
+            "Treatment Type",
+            "Other"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyOtherFactorType",
+          "name": "studyOtherFactorType",
+          "label": "Other Factor Type",
+          "help": "If Other was selected in Factor Type, list any other factor types that were used in this Dataset.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyAssayOrganism",
+          "name": "studyAssayOrganism",
+          "label": "Organism",
+          "help": "The taxonomic name of the organism used in the Dataset or from which the  starting biological material derives.",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "Arabidopsis thaliana",
+            "Bos taurus",
+            "Caenorhabditis elegans",
+            "Chlamydomonas reinhardtii",
+            "Danio rerio (zebrafish)",
+            "Dictyostelium discoideum",
+            "Drosophila melanogaster",
+            "Escherichia coli",
+            "Hepatitis C virus",
+            "Homo sapiens",
+            "Mus musculus",
+            "Mycobacterium africanum",
+            "Mycobacterium canetti",
+            "Mycobacterium tuberculosis",
+            "Mycoplasma pneumoniae",
+            "Oryza sativa",
+            "Plasmodium falciparum",
+            "Pneumocystis carinii",
+            "Rattus norvegicus",
+            "Saccharomyces cerevisiae (brewer's yeast)",
+            "Schizosaccharomyces pombe",
+            "Takifugu rubripes",
+            "Xenopus laevis",
+            "Zea mays",
+            "Other"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyAssayOtherOrganism",
+          "name": "studyAssayOtherOrganism",
+          "label": "Other Organism",
+          "help": "If Other was selected in Organism, list any other organisms that were used in this Dataset. Terms from the NCBI Taxonomy are recommended.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyAssayMeasurementType",
+          "name": "studyAssayMeasurementType",
+          "label": "Measurement Type",
+          "help": "A term to qualify the endpoint, or what is being measured (e.g. gene expression profiling; protein identification).",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "cell sorting",
+            "clinical chemistry analysis",
+            "copy number variation profiling",
+            "DNA methylation profiling",
+            "DNA methylation profiling (Bisulfite-Seq)",
+            "DNA methylation profiling (MeDIP-Seq)",
+            "drug susceptibility",
+            "environmental gene survey",
+            "genome sequencing",
+            "hematology",
+            "histology",
+            "Histone Modification (ChIP-Seq)",
+            "loss of heterozygosity profiling",
+            "metabolite profiling",
+            "metagenome sequencing",
+            "protein expression profiling",
+            "protein identification",
+            "protein-DNA binding site identification",
+            "protein-protein interaction detection",
+            "protein-RNA binding (RIP-Seq)",
+            "SNP analysis",
+            "targeted sequencing",
+            "transcription factor binding (ChIP-Seq)",
+            "transcription factor binding site identification",
+            "transcription profiling",
+            "transcription profiling (Microarray)",
+            "transcription profiling (RNA-Seq)",
+            "TRAP translational profiling",
+            "Other"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyAssayOtherMeasurmentType",
+          "name": "studyAssayOtherMeasurmentType",
+          "label": "Other Measurement Type",
+          "help": "If Other was selected in Measurement Type, list any other measurement types that were used. Terms from NCBO Bioportal are recommended.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyAssayTechnologyType",
+          "name": "studyAssayTechnologyType",
+          "label": "Technology Type",
+          "help": "A term to identify the technology used to perform the measurement (e.g. DNA microarray; mass spectrometry).",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "culture based drug susceptibility testing, single concentration",
+            "culture based drug susceptibility testing, two concentrations",
+            "culture based drug susceptibility testing, three or more concentrations (minimium inhibitory concentration measurement)",
+            "DNA microarray",
+            "flow cytometry",
+            "gel electrophoresis",
+            "mass spectrometry",
+            "NMR spectroscopy",
+            "nucleotide sequencing",
+            "protein microarray",
+            "real time PCR",
+            "no technology required",
+            "Other"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyAssayOtherTechnologyType",
+          "name": "studyAssayOtherTechnologyType",
+          "label": "Other Technology Type",
+          "help": "If Other was selected in Technology Type, list any other technology types that were used in this Dataset.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyAssayPlatform",
+          "name": "studyAssayPlatform",
+          "label": "Technology Platform",
+          "help": "The manufacturer and name of the technology platform used in the assay (e.g. Bruker AVANCE).",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "210-MS GC Ion Trap (Varian)",
+            "220-MS GC Ion Trap (Varian)",
+            "225-MS GC Ion Trap (Varian)",
+            "240-MS GC Ion Trap (Varian)",
+            "300-MS quadrupole GC/MS (Varian)",
+            "320-MS LC/MS (Varian)",
+            "325-MS LC/MS (Varian)",
+            "320-MS GC/MS (Varian)",
+            "500-MS LC/MS (Varian)",
+            "800D (Jeol)",
+            "910-MS TQ-FT (Varian)",
+            "920-MS TQ-FT (Varian)",
+            "3100 Mass Detector (Waters)",
+            "6110 Quadrupole LC/MS (Agilent)",
+            "6120 Quadrupole LC/MS (Agilent)",
+            "6130 Quadrupole LC/MS (Agilent)",
+            "6140 Quadrupole LC/MS (Agilent)",
+            "6310 Ion Trap LC/MS (Agilent)",
+            "6320 Ion Trap LC/MS (Agilent)",
+            "6330 Ion Trap LC/MS (Agilent)",
+            "6340 Ion Trap LC/MS (Agilent)",
+            "6410 Triple Quadrupole LC/MS (Agilent)",
+            "6430 Triple Quadrupole LC/MS (Agilent)",
+            "6460 Triple Quadrupole LC/MS (Agilent)",
+            "6490 Triple Quadrupole LC/MS (Agilent)",
+            "6530 Q-TOF LC/MS (Agilent)",
+            "6540 Q-TOF LC/MS (Agilent)",
+            "6210 TOF LC/MS (Agilent)",
+            "6220 TOF LC/MS (Agilent)",
+            "6230 TOF LC/MS (Agilent)",
+            "7000B Triple Quadrupole GC/MS (Agilent)",
+            "AccuTO DART (Jeol)",
+            "AccuTOF GC (Jeol)",
+            "AccuTOF LC (Jeol)",
+            "ACQUITY SQD (Waters)",
+            "ACQUITY TQD (Waters)",
+            "Agilent",
+            "Agilent 5975E GC/MSD (Agilent)",
+            "Agilent 5975T LTM GC/MSD (Agilent)",
+            "5975C Series GC/MSD (Agilent)",
+            "Affymetrix",
+            "amaZon ETD ESI Ion Trap (Bruker)",
+            "amaZon X ESI Ion Trap (Bruker)",
+            "apex-ultra hybrid Qq-FTMS (Bruker)",
+            "API 2000 (AB Sciex)",
+            "API 3200 (AB Sciex)",
+            "API 3200 QTRAP (AB Sciex)",
+            "API 4000 (AB Sciex)",
+            "API 4000 QTRAP (AB Sciex)",
+            "API 5000 (AB Sciex)",
+            "API 5500 (AB Sciex)",
+            "API 5500 QTRAP (AB Sciex)",
+            "Applied Biosystems Group (ABI)",
+            "AQI Biosciences",
+            "Atmospheric Pressure GC (Waters)",
+            "autoflex III MALDI-TOF MS (Bruker)",
+            "autoflex speed(Bruker)",
+            "AutoSpec Premier (Waters)",
+            "AXIMA Mega TOF (Shimadzu)",
+            "AXIMA Performance MALDI TOF/TOF (Shimadzu)",
+            "A-10 Analyzer (Apogee)",
+            "A-40-MiniFCM (Apogee)",
+            "Bactiflow (Chemunex SA)",
+            "Base4innovation",
+            "BD BACTEC MGIT 320",
+            "BD BACTEC MGIT 960",
+            "BD Radiometric BACTEC 460TB",
+            "BioNanomatrix",
+            "Cell Lab Quanta SC (Becman Coulter)",
+            "Clarus 560 D GC/MS (PerkinElmer)",
+            "Clarus 560 S GC/MS (PerkinElmer)",
+            "Clarus 600 GC/MS (PerkinElmer)",
+            "Complete Genomics",
+            "Cyan (Dako Cytomation)",
+            "CyFlow ML (Partec)",
+            "Cyow SL (Partec)",
+            "CyFlow SL3 (Partec)",
+            "CytoBuoy (Cyto Buoy Inc)",
+            "CytoSence (Cyto Buoy Inc)",
+            "CytoSub (Cyto Buoy Inc)",
+            "Danaher",
+            "DFS (Thermo Scientific)",
+            "Exactive(Thermo Scientific)",
+            "FACS Canto (Becton Dickinson)",
+            "FACS Canto2 (Becton Dickinson)",
+            "FACS Scan (Becton Dickinson)",
+            "FC 500 (Becman Coulter)",
+            "GCmate II GC/MS (Jeol)",
+            "GCMS-QP2010 Plus (Shimadzu)",
+            "GCMS-QP2010S Plus (Shimadzu)",
+            "GCT Premier (Waters)",
+            "GENEQ",
+            "Genome Corp.",
+            "GenoVoxx",
+            "GnuBio",
+            "Guava EasyCyte Mini (Millipore)",
+            "Guava EasyCyte Plus (Millipore)",
+            "Guava Personal Cell Analysis (Millipore)",
+            "Guava Personal Cell Analysis-96 (Millipore)",
+            "Helicos BioSciences",
+            "Illumina",
+            "Indirect proportion method on LJ medium",
+            "Indirect proportion method on Middlebrook Agar 7H9",
+            "Indirect proportion method on Middlebrook Agar 7H10",
+            "Indirect proportion method on Middlebrook Agar 7H11",
+            "inFlux Analyzer (Cytopeia)",
+            "Intelligent Bio-Systems",
+            "ITQ 700 (Thermo Scientific)",
+            "ITQ 900 (Thermo Scientific)",
+            "ITQ 1100 (Thermo Scientific)",
+            "JMS-53000 SpiralTOF (Jeol)",
+            "LaserGen",
+            "LCMS-2020 (Shimadzu)",
+            "LCMS-2010EV (Shimadzu)",
+            "LCMS-IT-TOF (Shimadzu)",
+            "Li-Cor",
+            "Life Tech",
+            "LightSpeed Genomics",
+            "LCT Premier XE (Waters)",
+            "LCQ Deca XP MAX (Thermo Scientific)",
+            "LCQ Fleet (Thermo Scientific)",
+            "LXQ (Thermo Scientific)",
+            "LTQ Classic (Thermo Scientific)",
+            "LTQ XL (Thermo Scientific)",
+            "LTQ Velos (Thermo Scientific)",
+            "LTQ Orbitrap Classic (Thermo Scientific)",
+            "LTQ Orbitrap XL (Thermo Scientific)",
+            "LTQ Orbitrap Discovery (Thermo Scientific)",
+            "LTQ Orbitrap Velos (Thermo Scientific)",
+            "Luminex 100 (Luminex)",
+            "Luminex 200 (Luminex)",
+            "MACS Quant (Miltenyi)",
+            "MALDI SYNAPT G2 HDMS (Waters)",
+            "MALDI SYNAPT G2 MS (Waters)",
+            "MALDI SYNAPT HDMS (Waters)",
+            "MALDI SYNAPT MS (Waters)",
+            "MALDI micro MX (Waters)",
+            "maXis (Bruker)",
+            "maXis G4 (Bruker)",
+            "microflex LT MALDI-TOF MS (Bruker)",
+            "microflex LRF MALDI-TOF MS (Bruker)",
+            "microflex III MALDI-TOF MS (Bruker)",
+            "micrOTOF II ESI TOF (Bruker)",
+            "micrOTOF-Q II ESI-Qq-TOF (Bruker)",
+            "microplate Alamar Blue (resazurin) colorimetric method",
+            "Mstation (Jeol)",
+            "MSQ Plus (Thermo Scientific)",
+            "NABsys",
+            "Nanophotonics Biosciences",
+            "Network Biosystems",
+            "Nimblegen",
+            "Oxford Nanopore Technologies",
+            "Pacific Biosciences",
+            "Population Genetics Technologies",
+            "Q1000GC UltraQuad (Jeol)",
+            "Quattro micro API (Waters)",
+            "Quattro micro GC (Waters)",
+            "Quattro Premier XE (Waters)",
+            "QSTAR (AB Sciex)",
+            "Reveo",
+            "Roche",
+            "Seirad",
+            "solariX hybrid Qq-FTMS (Bruker)",
+            "Somacount (Bently Instruments)",
+            "SomaScope (Bently Instruments)",
+            "SYNAPT G2 HDMS (Waters)",
+            "SYNAPT G2 MS (Waters)",
+            "SYNAPT HDMS (Waters)",
+            "SYNAPT MS (Waters)",
+            "TripleTOF 5600 (AB Sciex)",
+            "TSQ Quantum Ultra (Thermo Scientific)",
+            "TSQ Quantum Access (Thermo Scientific)",
+            "TSQ Quantum Access MAX (Thermo Scientific)",
+            "TSQ Quantum Discovery MAX (Thermo Scientific)",
+            "TSQ Quantum GC (Thermo Scientific)",
+            "TSQ Quantum XLS (Thermo Scientific)",
+            "TSQ Vantage (Thermo Scientific)",
+            "ultrafleXtreme MALDI-TOF MS (Bruker)",
+            "VisiGen Biotechnologies",
+            "Xevo G2 QTOF (Waters)",
+            "Xevo QTof MS (Waters)",
+            "Xevo TQ MS (Waters)",
+            "Xevo TQ-S (Waters)",
+            "Other"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyAssayOtherPlatform",
+          "name": "studyAssayOtherPlatform",
+          "label": "Other Technology Platform",
+          "help": "If Other was selected in Technology Platform, list any other technology platforms that were used in this Dataset.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false,
+          "group": "Life Sciences"
+        },
+        {
+          "id": "https://dataverse.org/schema/biomedical/studyAssayCellType",
+          "name": "studyAssayCellType",
+          "label": "Cell Type",
+          "help": "The name of the cell line from which the source or sample derives.",
+          "type": [
+            "Select"
+          ],
+          "required": false,
+          "multiple": true,
+          "group": "Life Sciences"
+        }
+      ],
+      "definition": "override"
+    },
+    "File": {
+      "label": "File",
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://schema.org/contentSize",
+          "name": "contentSize",
+          "label": "Content size",
+          "help": "File size in bytes",
+          "type": [
+            "Text"
+          ],
+          "required": true,
+          "multiple": false
+        },
+        {
+          "id": "https://schema.org/encodingFormat",
+          "name": "encodingFormat",
+          "label": "Encoding type",
+          "help": "MIME type of file",
+          "type": [
+            "Text"
+          ],
+          "required": true,
+          "multiple": false
+        },
+        {
+          "id": "https://schema.org/description",
+          "name": "description",
+          "label": "Description",
+          "help": "Description of the file's content",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ]
+    },
+    "otherId": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/otherIdAgency",
+          "name": "otherIdAgency",
+          "label": "Agency",
+          "help": "The name of the agency that generated the other identifier",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/otherIdValue",
+          "name": "otherIdValue",
+          "label": "Identifier",
+          "help": "Another identifier uniquely identifies the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Other Identifier",
+      "help": "Another unique identifier for the Dataset (e.g. producer's or another repository's identifier)"
+    },
+    "author": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/authorName",
+          "name": "authorName",
+          "label": "Name",
+          "help": "The name of the author, such as the person's name or the name of an organization",
+          "type": [
+            "Text"
+          ],
+          "required": true,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/authorAffiliation",
+          "name": "authorAffiliation",
+          "label": "Affiliation",
+          "help": "The name of the entity affiliated with the author, e.g. an organization's name",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/spar/datacite/AgentIdentifierScheme",
+          "name": "authorIdentifierScheme",
+          "label": "Identifier Type",
+          "help": "The type of identifier that uniquely identifies the author (e.g. ORCID, ISNI)",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "ORCID",
+            "ISNI",
+            "LCNA",
+            "VIAF",
+            "GND",
+            "DAI",
+            "ResearcherID",
+            "ScopusID"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/spar/datacite/AgentIdentifier",
+          "name": "authorIdentifier",
+          "label": "Identifier",
+          "help": "Uniquely identifies the author when paired with an identifier type",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Author",
+      "help": "The entity, e.g. a person or organization, that created the Dataset"
+    },
+    "datasetContact": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/datasetContactName",
+          "name": "datasetContactName",
+          "label": "Name",
+          "help": "The name of the point of contact, e.g. the person's name or the name of an organization",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/datasetContactAffiliation",
+          "name": "datasetContactAffiliation",
+          "label": "Affiliation",
+          "help": "The name of the entity affiliated with the point of contact, e.g. an organization's name",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/datasetContactEmail",
+          "name": "datasetContactEmail",
+          "label": "E-mail",
+          "help": "The point of contact's email address",
+          "type": [
+            "Text"
+          ],
+          "required": true,
+          "multiple": false
+        }
+      ],
+      "label": "Point of Contact",
+      "help": "The entity, e.g. a person or organization, that users of the Dataset can contact with questions"
+    },
+    "dsDescription": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/dsDescriptionValue",
+          "name": "dsDescriptionValue",
+          "label": "Text",
+          "help": "A summary describing the purpose, nature, and scope of the Dataset",
+          "type": [
+            "TextArea"
+          ],
+          "required": true,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/dsDescriptionDate",
+          "name": "dsDescriptionDate",
+          "label": "Date",
+          "help": "The date when the description was added to the Dataset. If the Dataset contains more than one description, e.g. the data producer supplied one description and the data repository supplied another, this date is used to distinguish between the descriptions",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Description",
+      "help": "A summary describing the purpose, nature, and scope of the Dataset"
+    },
+    "keyword": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/keywordValue",
+          "name": "keywordValue",
+          "label": "Term",
+          "help": "A key term that describes important aspects of the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/keywordVocabulary",
+          "name": "keywordVocabulary",
+          "label": "Controlled Vocabulary Name",
+          "help": "The controlled vocabulary used for the keyword term (e.g. LCSH, MeSH)",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/keywordVocabularyURI",
+          "name": "keywordVocabularyURI",
+          "label": "Controlled Vocabulary URL",
+          "help": "The URL where one can access information about the term's controlled vocabulary",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Keyword",
+      "help": "A key term that describes an important aspect of the Dataset and information about any controlled vocabulary used"
+    },
+    "topicClassification": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/topicClassValue",
+          "name": "topicClassValue",
+          "label": "Term",
+          "help": "A topic or subject term",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/topicClassVocab",
+          "name": "topicClassVocab",
+          "label": "Controlled Vocabulary Name",
+          "help": "The controlled vocabulary used for the keyword term (e.g. LCSH, MeSH)",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/topicClassVocabURI",
+          "name": "topicClassVocabURI",
+          "label": "Controlled Vocabulary URL",
+          "help": "The URL where one can access information about the term's controlled vocabulary",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Topic Classification",
+      "help": "Indicates a broad, important topic or subject that the Dataset covers and information about any controlled vocabulary used"
+    },
+    "publication": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "http://purl.org/dc/terms/bibliographicCitation",
+          "name": "publicationCitation",
+          "label": "Citation",
+          "help": "The full bibliographic citation for the related publication",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/spar/datacite/ResourceIdentifierScheme",
+          "name": "publicationIDType",
+          "label": "Identifier Type",
+          "help": "The type of identifier that uniquely identifies a related publication",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "ark",
+            "arXiv",
+            "bibcode",
+            "cstr",
+            "doi",
+            "ean13",
+            "eissn",
+            "handle",
+            "isbn",
+            "issn",
+            "istc",
+            "lissn",
+            "lsid",
+            "pmid",
+            "purl",
+            "upc",
+            "url",
+            "urn",
+            "DASH-NRS"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "http://purl.org/spar/datacite/ResourceIdentifier",
+          "name": "publicationIDNumber",
+          "label": "Identifier",
+          "help": "The identifier for a related publication",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://schema.org/distribution",
+          "name": "publicationURL",
+          "label": "URL",
+          "help": "The URL form of the identifier entered in the Identifier field, e.g. the DOI URL if a DOI was entered in the Identifier field. Used to display what was entered in the ID Type and ID Number fields as a link. If what was entered in the Identifier field has no URL form, the URL of the publication webpage is used, e.g. a journal article webpage",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Related Publication",
+      "help": "The article or report that uses the data in the Dataset. The full list of related publications will be displayed on the metadata tab"
+    },
+    "producer": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/producerName",
+          "name": "producerName",
+          "label": "Name",
+          "help": "The name of the entity, e.g. the person's name or the name of an organization",
+          "type": [
+            "Text"
+          ],
+          "required": true,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/producerAffiliation",
+          "name": "producerAffiliation",
+          "label": "Affiliation",
+          "help": "The name of the entity affiliated with the producer, e.g. an organization's name",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/producerAbbreviation",
+          "name": "producerAbbreviation",
+          "label": "Abbreviated Name",
+          "help": "The producer's abbreviated name (e.g. IQSS, ICPSR)",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/producerURL",
+          "name": "producerURL",
+          "label": "URL",
+          "help": "The URL of the producer's website",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/producerLogoURL",
+          "name": "producerLogoURL",
+          "label": "Logo URL",
+          "help": "The URL of the producer's logo",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Producer",
+      "help": "The entity, such a person or organization, managing the finances or other administrative processes involved in the creation of the Dataset"
+    },
+    "contributor": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/contributorType",
+          "name": "contributorType",
+          "label": "Type",
+          "help": "Indicates the type of contribution made to the dataset",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "Data Collector",
+            "Data Curator",
+            "Data Manager",
+            "Editor",
+            "Funder",
+            "Hosting Institution",
+            "Project Leader",
+            "Project Manager",
+            "Project Member",
+            "Related Person",
+            "Researcher",
+            "Research Group",
+            "Rights Holder",
+            "Sponsor",
+            "Supervisor",
+            "Work Package Leader",
+            "Other"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/contributorName",
+          "name": "contributorName",
+          "label": "Name",
+          "help": "The name of the contributor, e.g. the person's name or the name of an organization",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Contributor",
+      "help": "The entity, such as a person or organization, responsible for collecting, managing, or otherwise contributing to the development of the Dataset"
+    },
+    "grantNumber": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/grantNumberAgency",
+          "name": "grantNumberAgency",
+          "label": "Agency",
+          "help": "The agency that provided financial support for the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/grantNumberValue",
+          "name": "grantNumberValue",
+          "label": "Identifier",
+          "help": "The grant identifier or contract identifier of the agency that provided financial support for the Dataset",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Funding Information",
+      "help": "Information about the Dataset's financial support"
+    },
+    "distributor": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/distributorName",
+          "name": "distributorName",
+          "label": "Name",
+          "help": "The name of the entity, e.g. the person's name or the name of an organization",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributorAffiliation",
+          "name": "distributorAffiliation",
+          "label": "Affiliation",
+          "help": "The name of the entity affiliated with the distributor, e.g. an organization's name",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributorAbbreviation",
+          "name": "distributorAbbreviation",
+          "label": "Abbreviated Name",
+          "help": "The distributor's abbreviated name (e.g. IQSS, ICPSR)",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributorURL",
+          "name": "distributorURL",
+          "label": "URL",
+          "help": "The URL of the distributor's webpage",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/distributorLogoURL",
+          "name": "distributorLogoURL",
+          "label": "Logo URL",
+          "help": "The URL of the distributor's logo image, used to show the image on the Dataset's page",
+          "type": [
+            "URL"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Distributor",
+      "help": "The entity, such as a person or organization, designated to generate copies of the Dataset, including any editions or revisions"
+    },
+    "timePeriodCovered": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/timePeriodCoveredStart",
+          "name": "timePeriodCoveredStart",
+          "label": "Start Date",
+          "help": "The start date of the time period that the data refer to",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/timePeriodCoveredEnd",
+          "name": "timePeriodCoveredEnd",
+          "label": "End Date",
+          "help": "The end date of the time period that the data refer to",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Time Period",
+      "help": "The time period that the data refer to. Also known as span. This is the time period covered by the data, not the dates of coding, collecting data, or making documents machine-readable"
+    },
+    "dateOfCollection": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/dateOfCollectionStart",
+          "name": "dateOfCollectionStart",
+          "label": "Start Date",
+          "help": "The date when the data collection started",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/dateOfCollectionEnd",
+          "name": "dateOfCollectionEnd",
+          "label": "End Date",
+          "help": "The date when the data collection ended",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Date of Collection",
+      "help": "The dates when the data were collected or generated"
+    },
+    "series": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/seriesName",
+          "name": "seriesName",
+          "label": "Name",
+          "help": "The name of the dataset series",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/seriesInformation",
+          "name": "seriesInformation",
+          "label": "Information",
+          "help": "Can include 1) a history of the series and 2) a summary of features that apply to the series",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Series",
+      "help": "Information about the dataset series to which the Dataset belong"
+    },
+    "software": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/citation/softwareName",
+          "name": "softwareName",
+          "label": "Name",
+          "help": "The name of software used to generate the Dataset",
+          "type": [
+            "Select"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/citation/softwareVersion",
+          "name": "softwareVersion",
+          "label": "Version",
+          "help": "The version of the software used to generate the Dataset, e.g. 4.11",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Software",
+      "help": "Information about the software used to generate the Dataset"
+    },
+    "journalVolumeIssue": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/journal/journalVolume",
+          "name": "journalVolume",
+          "label": "Volume",
+          "help": "The journal volume which this Dataset is associated with (e.g., Volume 4).",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/journal/journalIssue",
+          "name": "journalIssue",
+          "label": "Issue",
+          "help": "The journal issue number which this Dataset is associated with (e.g., Number 2, Autumn).",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/journal/journalPubDate",
+          "name": "journalPubDate",
+          "label": "Publication Date",
+          "help": "The publication date for this journal volume/issue, which this Dataset is associated with (e.g., 1999).",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Journal",
+      "help": "Indicates the volume, issue and date of a journal, which this Dataset is associated with."
+    },
+    "geographicCoverage": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/geospatial/country",
+          "name": "country",
+          "label": "Country / Nation",
+          "help": "The country or nation that the Dataset is about.",
+          "type": [
+            "Select"
+          ],
+          "values": [
+            "Afghanistan",
+            "Albania",
+            "Algeria",
+            "American Samoa",
+            "Andorra",
+            "Angola",
+            "Anguilla",
+            "Antarctica",
+            "Antigua and Barbuda",
+            "Argentina",
+            "Armenia",
+            "Aruba",
+            "Australia",
+            "Austria",
+            "Azerbaijan",
+            "Bahamas",
+            "Bahrain",
+            "Bangladesh",
+            "Barbados",
+            "Belarus",
+            "Belgium",
+            "Belize",
+            "Benin",
+            "Bermuda",
+            "Bhutan",
+            "Bolivia, Plurinational State of",
+            "Bonaire, Sint Eustatius and Saba",
+            "Bosnia and Herzegovina",
+            "Botswana",
+            "Bouvet Island",
+            "Brazil",
+            "British Indian Ocean Territory",
+            "Brunei Darussalam",
+            "Bulgaria",
+            "Burkina Faso",
+            "Burundi",
+            "Cambodia",
+            "Cameroon",
+            "Canada",
+            "Cape Verde",
+            "Cayman Islands",
+            "Central African Republic",
+            "Chad",
+            "Chile",
+            "China",
+            "Christmas Island",
+            "Cocos (Keeling) Islands",
+            "Colombia",
+            "Comoros",
+            "Congo",
+            "Congo, the Democratic Republic of the",
+            "Cook Islands",
+            "Costa Rica",
+            "Croatia",
+            "Cuba",
+            "Curaçao",
+            "Cyprus",
+            "Czech Republic",
+            "Côte d'Ivoire",
+            "Denmark",
+            "Djibouti",
+            "Dominica",
+            "Dominican Republic",
+            "Ecuador",
+            "Egypt",
+            "El Salvador",
+            "Equatorial Guinea",
+            "Eritrea",
+            "Estonia",
+            "Ethiopia",
+            "Falkland Islands (Malvinas)",
+            "Faroe Islands",
+            "Fiji",
+            "Finland",
+            "France",
+            "French Guiana",
+            "French Polynesia",
+            "French Southern Territories",
+            "Gabon",
+            "Gambia",
+            "Georgia",
+            "Germany",
+            "Ghana",
+            "Gibraltar",
+            "Greece",
+            "Greenland",
+            "Grenada",
+            "Guadeloupe",
+            "Guam",
+            "Guatemala",
+            "Guernsey",
+            "Guinea",
+            "Guinea-Bissau",
+            "Guyana",
+            "Haiti",
+            "Heard Island and Mcdonald Islands",
+            "Holy See (Vatican City State)",
+            "Honduras",
+            "Hong Kong",
+            "Hungary",
+            "Iceland",
+            "India",
+            "Indonesia",
+            "Iran, Islamic Republic of",
+            "Iraq",
+            "Ireland",
+            "Isle of Man",
+            "Israel",
+            "Italy",
+            "Jamaica",
+            "Japan",
+            "Jersey",
+            "Jordan",
+            "Kazakhstan",
+            "Kenya",
+            "Kiribati",
+            "Korea, Democratic People's Republic of",
+            "Korea, Republic of",
+            "Kuwait",
+            "Kyrgyzstan",
+            "Lao People's Democratic Republic",
+            "Latvia",
+            "Lebanon",
+            "Lesotho",
+            "Liberia",
+            "Libya",
+            "Liechtenstein",
+            "Lithuania",
+            "Luxembourg",
+            "Macao",
+            "Macedonia, the Former Yugoslav Republic of",
+            "Madagascar",
+            "Malawi",
+            "Malaysia",
+            "Maldives",
+            "Mali",
+            "Malta",
+            "Marshall Islands",
+            "Martinique",
+            "Mauritania",
+            "Mauritius",
+            "Mayotte",
+            "Mexico",
+            "Micronesia, Federated States of",
+            "Moldova, Republic of",
+            "Monaco",
+            "Mongolia",
+            "Montenegro",
+            "Montserrat",
+            "Morocco",
+            "Mozambique",
+            "Myanmar",
+            "Namibia",
+            "Nauru",
+            "Nepal",
+            "Netherlands",
+            "New Caledonia",
+            "New Zealand",
+            "Nicaragua",
+            "Niger",
+            "Nigeria",
+            "Niue",
+            "Norfolk Island",
+            "Northern Mariana Islands",
+            "Norway",
+            "Oman",
+            "Pakistan",
+            "Palau",
+            "Palestine, State of",
+            "Panama",
+            "Papua New Guinea",
+            "Paraguay",
+            "Peru",
+            "Philippines",
+            "Pitcairn",
+            "Poland",
+            "Portugal",
+            "Puerto Rico",
+            "Qatar",
+            "Romania",
+            "Russian Federation",
+            "Rwanda",
+            "Réunion",
+            "Saint Barthélemy",
+            "Saint Helena, Ascension and Tristan da Cunha",
+            "Saint Kitts and Nevis",
+            "Saint Lucia",
+            "Saint Martin (French part)",
+            "Saint Pierre and Miquelon",
+            "Saint Vincent and the Grenadines",
+            "Samoa",
+            "San Marino",
+            "Sao Tome and Principe",
+            "Saudi Arabia",
+            "Senegal",
+            "Serbia",
+            "Seychelles",
+            "Sierra Leone",
+            "Singapore",
+            "Sint Maarten (Dutch part)",
+            "Slovakia",
+            "Slovenia",
+            "Solomon Islands",
+            "Somalia",
+            "South Africa",
+            "South Georgia and the South Sandwich Islands",
+            "South Sudan",
+            "Spain",
+            "Sri Lanka",
+            "Sudan",
+            "Suriname",
+            "Svalbard and Jan Mayen",
+            "Swaziland",
+            "Sweden",
+            "Switzerland",
+            "Syrian Arab Republic",
+            "Taiwan, Province of China",
+            "Tajikistan",
+            "Tanzania, United Republic of",
+            "Thailand",
+            "Timor-Leste",
+            "Togo",
+            "Tokelau",
+            "Tonga",
+            "Trinidad and Tobago",
+            "Tunisia",
+            "Turkey",
+            "Turkmenistan",
+            "Turks and Caicos Islands",
+            "Tuvalu",
+            "Uganda",
+            "Ukraine",
+            "United Arab Emirates",
+            "United Kingdom",
+            "United States",
+            "United States Minor Outlying Islands",
+            "Uruguay",
+            "Uzbekistan",
+            "Vanuatu",
+            "Venezuela, Bolivarian Republic of",
+            "Viet Nam",
+            "Virgin Islands, British",
+            "Virgin Islands, U.S.",
+            "Wallis and Futuna",
+            "Western Sahara",
+            "Yemen",
+            "Zambia",
+            "Zimbabwe",
+            "Åland Islands"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/geospatial/state",
+          "name": "state",
+          "label": "State / Province",
+          "help": "The state or province that the Dataset is about. Use GeoNames for correct spelling and avoid abbreviations.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/geospatial/city",
+          "name": "city",
+          "label": "City",
+          "help": "The name of the city that the Dataset is about. Use GeoNames for correct spelling and avoid abbreviations.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/geospatial/otherGeographicCoverage",
+          "name": "otherGeographicCoverage",
+          "label": "Other",
+          "help": "Other information on the geographic coverage of the data.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Geographic Coverage",
+      "help": "Information on the geographic coverage of the data. Includes the total geographic scope of the data."
+    },
+    "geographicBoundingBox": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/geospatial/westLongitude",
+          "name": "westLongitude",
+          "label": "West Longitude",
+          "help": "Westernmost coordinate delimiting the geographic extent of the Dataset. A valid range of values,  expressed in decimal degrees, is -180,0 <= West  Bounding Longitude Value <= 180,0.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/geospatial/eastLongitude",
+          "name": "eastLongitude",
+          "label": "East Longitude",
+          "help": "Easternmost coordinate delimiting the geographic extent of the Dataset. A valid range of values,  expressed in decimal degrees, is -180,0 <= East Bounding Longitude Value <= 180,0.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/geospatial/northLongitude",
+          "name": "northLongitude",
+          "label": "North Latitude",
+          "help": "Northernmost coordinate delimiting the geographic extent of the Dataset. A valid range of values,  expressed in decimal degrees, is -90,0 <= North Bounding Latitude Value <= 90,0.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/geospatial/southLongitude",
+          "name": "southLongitude",
+          "label": "South Latitude",
+          "help": "Southernmost coordinate delimiting the geographic extent of the Dataset. A valid range of values,  expressed in decimal degrees, is -90,0 <= South Bounding Latitude Value <= 90,0.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Geographic Bounding Box",
+      "help": "The fundamental geometric description for any Dataset that models geography is the geographic bounding box. It describes the minimum box, defined by west and east longitudes and north and south latitudes, which includes the largest geographic extent of the  Dataset's geographic coverage. This element is used in the first pass of a coordinate-based search. Inclusion of this element in the codebook is recommended, but is required if the bound polygon box is included. "
+    },
+    "targetSampleSize": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/socialscience/targetSampleActualSize",
+          "name": "targetSampleActualSize",
+          "label": "Actual",
+          "help": "Actual sample size.",
+          "type": [
+            "Number"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/targetSampleSizeFormula",
+          "name": "targetSampleSizeFormula",
+          "label": "Formula",
+          "help": "Formula used to determine target sample size.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Target Sample Size",
+      "help": "Specific information regarding the target sample size, actual  sample size, and the formula used to determine this."
+    },
+    "socialScienceNotes": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/socialscience/socialScienceNotesType",
+          "name": "socialScienceNotesType",
+          "label": "Type",
+          "help": "Type of note.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/socialScienceNotesSubject",
+          "name": "socialScienceNotesSubject",
+          "label": "Subject",
+          "help": "Note subject.",
+          "type": [
+            "Text"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/socialscience/socialScienceNotesText",
+          "name": "socialScienceNotesText",
+          "label": "Text",
+          "help": "Text for this note.",
+          "type": [
+            "TextArea"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Notes",
+      "help": "General notes about this Dataset."
+    },
+    "coverage:Spectral:Wavelength": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Spectral.MinimumWavelength",
+          "name": "coverage:Spectral:MinimumWavelength",
+          "label": "Minimum (m)",
+          "help": "The minimum wavelength of the spectral bandpass, in meters.",
+          "type": [
+            "Number"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Spectral.MaximumWavelength",
+          "name": "coverage:Spectral:MaximumWavelength",
+          "label": "Maximum (m)",
+          "help": "The maximum wavelength of the spectral bandpass, in meters.",
+          "type": [
+            "Number"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Wavelength Range",
+      "help": "The minimum and maximum wavelength of the spectral bandpass."
+    },
+    "coverage:Temporal": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Temporal.StartTime",
+          "name": "coverage:Temporal:StartTime",
+          "label": "Start",
+          "help": "Dataset Start Date",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Temporal.StopTime",
+          "name": "coverage:Temporal:StopTime",
+          "label": "End",
+          "help": "Dataset End Date",
+          "type": [
+            "Date"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Dataset Date Range",
+      "help": " Time period covered by the data."
+    },
+    "coverage:RedshiftValue": {
+      "definition": "override",
+      "subClassOf": [],
+      "inputs": [
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Redshift.MinimumValue",
+          "name": "coverage:Redshift:MinimumValue",
+          "label": "Minimum",
+          "help": "The minimum value of the redshift (unitless) or Doppler velocity (km/s in the data object.",
+          "type": [
+            "Number"
+          ],
+          "required": false,
+          "multiple": false
+        },
+        {
+          "id": "https://dataverse.org/schema/astrophysics/coverage.Redshift.MaximumValue",
+          "name": "coverage:Redshift:MaximumValue",
+          "label": "Maximum",
+          "help": "The maximum value of the redshift (unitless) or Doppler velocity (km/s in the data object.",
+          "type": [
+            "Number"
+          ],
+          "required": false,
+          "multiple": false
+        }
+      ],
+      "label": "Redshift Value",
+      "help": "The value of the redshift (unitless) or Doppler velocity (km/s in the data object."
+    }
+  },
+  "enabledClasses": [
+    "Dataset",
+    "File"
+  ],
+  "layouts": [
+    {
+      "appliesTo": [
+        "Dataset"
+      ],
+      "about": {
+        "label": "About"
+      },
+      "Citation": {
+        "label": "Citation",
+        "description": ""
+      },
+      "Journal": {
+        "label": "Journal",
+        "description": ""
+      },
+      "Geospatial": {
+        "label": "Geospatial",
+        "description": ""
+      },
+      "Social Science and Humanities": {
+        "label": "Social Science and Humanities",
+        "description": ""
+      },
+      "Astronomy and Astrophysics": {
+        "label": "Astronomy and Astrophysics",
+        "description": ""
+      },
+      "Life Sciences": {
+        "label": "Life Sciences",
+        "description": ""
+      },
+      "overflow": {
+        "label": "Other"
+      }
+    }
+  ]
+}
