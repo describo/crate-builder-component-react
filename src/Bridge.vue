@@ -21,6 +21,8 @@ const props: DescriboCrateBuilderProps = reactive( {
     tabLocation: "left", // one of "top", "bottom", "left", "right"
     showControls: true, // a boolean
     language: "en", // a string
+    resetTabOnEntityChange: false,
+    resetTabOnProfileChange: false,
     //mode: "embedded", // either "embedded" or "online"
     // webComponent: false, // a boolean
 })
@@ -57,7 +59,9 @@ defineExpose({
         :tab-location="props.tabLocation"
         :show-controls="props.showControls"
         :web-component="false"
-        :mode="embedded"
+        mode="embedded"
+        :reset-tab-on-entity-change="props.resetTabOnEntityChange"
+        :reset-tab-on-profile-change="props.resetTabOnProfileChange"
         @ready="props.onReady"
         @error="props.onError"
         @save:crate="props.onSaveCrate"

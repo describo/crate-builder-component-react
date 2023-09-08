@@ -1,6 +1,6 @@
 {
   "name": "@describo/crate-builder-component-react",
-  "version": "0.40.1",
+  "version": "0.42.1",
   "description": "Describo Crate Builder in React",
   "author": "Balazs E. Pataki",
   "license": "MIT",
@@ -34,8 +34,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@describo/crate-builder-component": "^0.40.1",
-    "element-plus": "^2.3.12",
+    "@describo/crate-builder-component": "^0.42.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
@@ -80,9 +79,6 @@
     "react-dom": "^18.2.0"
   },
   "relativeDependenciesX": {
-    "@describo/crate-builder-component-react": "../crate-builder-component-react"
-  },
-  "relativeDependenciesXX": {
     "@describo/crate-builder-component": "../crate-builder-component"
   },
   "eslintConfig": {

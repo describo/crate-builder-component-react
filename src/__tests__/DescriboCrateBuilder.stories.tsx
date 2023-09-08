@@ -98,6 +98,8 @@ CompleteExample.args = {
   readonly: false,
   language: "en",
   tabLocation: "left",
+  resetTabOnEntityChange: true, // default by the vue component
+  resetTabOnProfileChange: true, // default by the vue component
   onReady: () => console.log("onReady called"),
   onSaveCrate: (crateData) => console.log("onSaveCrate called: ", crateData),
   onNavigation: (navData) => console.log("onNavigation called: ", navData),

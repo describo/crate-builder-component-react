@@ -51,6 +51,7 @@ export type DescriboCrateBuilderProps = {
   // enableReverseLinkBrowser: (default: true): enable / disable the reverse link browser. If enabled, it can be shown as a right sidebar as required.
   enableReverseLinkBrowser?: boolean,
 
+  // Allow the vue component to handle routing an browser history?
   enableInternalRouting?: boolean,
 
   // purgeUnlinkedEntities: (default: true): purge unlinked entities from the crate before emitting the crate for saving
@@ -66,7 +67,7 @@ export type DescriboCrateBuilderProps = {
   onError?: (message: string) => void,
 
   // Callback called when the crate has changed.
-  onSaveCrate?: (crate: JSONObject) => void,
+  onSaveCrate?: (saveData: {crate: JSONObject}) => void,
 
   // Callback called when the crate is to be saved as a template. If you implement onSaveCrateAsTemmplate, you should
   // also pass a Lookup object with entityTemplates so that the saved templates can be looked up reused in the
@@ -86,4 +87,13 @@ export type DescriboCrateBuilderProps = {
 
   // Show control bar with button like preview, delete entity, etc. or not
   showControls?: boolean
+
+  // When crate/entity is updated, should it remain on the currently selected tab or jump to About.
+  // The default is to jump back to about.
+  resetTabOnEntityChange?: boolean
+
+  // When profile is updated, should it remain on the currently selected tab or jump to About.
+  // The default is to jump back to About.
+  resetTabOnProfileChange?: boolean
+
 }
