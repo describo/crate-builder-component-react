@@ -34,7 +34,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@describo/crate-builder-component": "^0.42.1",
+    "@describo/crate-builder-component": "^0.43.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
