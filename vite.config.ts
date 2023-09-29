@@ -49,7 +49,12 @@ export default defineConfig({
     // }),
   ],
   optimizeDeps: {
-    include: ["element-plus", "lodash", "@describo/crate-builder-component"],
+    include: [
+      "element-plus",
+      "lodash",
+      "@describo/crate-builder-component",
+      "ajv" // Supress: The requested module '/node_modules/ajv/dist/ajv.js?v=09173956' does not provide an export named 'default'
+    ],
   },
 
   resolve: {
