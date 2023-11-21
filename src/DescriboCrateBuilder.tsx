@@ -7,7 +7,12 @@ import {createRouter, createWebHistory} from "vue-router";
 import Bridge from "./Bridge.vue";
 // @ts-ignore
 import DescriboCrateBuilderVue from "@describo/crate-builder-component";
+import './index.css'
 import "@describo/crate-builder-component/dist/vue/style.css";
+import "element-plus/dist/index.css";
+import "@fortawesome/fontawesome-free/js/all";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoReplaceSvg = "nest";
 
 function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
   // The element we mount onto
