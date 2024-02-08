@@ -12,6 +12,7 @@ import profileAllPrimitivesNoGroups from "./examples/profile/profile-with-all-pr
 import profileNyingarn from "./examples/profile/nyingarn-item-profile.json";
 import profileCitation from "./examples/profile/citation.profile.json";
 import profileAroma from "./examples/profile/aroma.profile.json";
+import profileWithConstraints from "./examples/profile/profile-with-constraints.json";
 import {DescriboCrateBuilderProps} from "../types";
 
 
@@ -23,7 +24,7 @@ const Template: StoryFn<typeof DescriboCrateBuilder> = (args) => {
 }
 
 const emptyProfile = {}
-const profiles = { emptyProfile, profileMultipleTypes, profileAllPrimitives, profileAllPrimitivesNoGroups, profileNyingarn, profileCitation, profileAroma};
+const profiles = { emptyProfile, profileMultipleTypes, profileAllPrimitives, profileAllPrimitivesNoGroups, profileNyingarn, profileCitation, profileAroma, profileWithConstraints};
 const crates = { crateEmpty, crateSimple, crateComplexCollection, crateComplexItem, crateLarge};
 
 
@@ -68,7 +69,8 @@ export default {
           profileAllPrimitivesNoGroups: profileAllPrimitivesNoGroups.metadata.name,
           profileNyingarn: profileNyingarn.metadata.name,
           profileCitation: profileCitation.metadata.name,
-          profileAroma: profileAroma.metadata.name
+          profileAroma: profileAroma.metadata.name,
+          profileWithConstraints: profileWithConstraints.metadata.name
         }
       },
     },
