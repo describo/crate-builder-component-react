@@ -66,7 +66,7 @@ defineExpose({
         @error="props.onError"
         @save:crate="props.onSaveCrate"
         @navigation="props.onNavigation"
-        @save:crate:template="props.onSaveCrateAsTemmplate"
+        @save:crate:template="props.onSaveCrateAsTemplate"
         @save:entity:template="props.onSaveEntityAsTemplate"
     />
 <!--    entityId: {{props.entityId}}-->
