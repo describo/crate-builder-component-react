@@ -96,4 +96,6 @@ export type DescriboCrateBuilderProps = {
   // The default is to jump back to About.
   resetTabOnProfileChange?: boolean
 
+  // If true text fields with an URL will be marked up with a link to the entity. If false, the URL will be shown as is.
+  enableUrlMarkup?: boolean
 }

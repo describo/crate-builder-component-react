@@ -23,6 +23,7 @@ const props: DescriboCrateBuilderProps = reactive( {
     language: "en", // a string
     resetTabOnEntityChange: false,
     resetTabOnProfileChange: false,
+    enableUrlMarkup: true,
     //mode: "embedded", // either "embedded" or "online"
     // webComponent: false, // a boolean
 })
@@ -62,6 +63,7 @@ defineExpose({
         mode="embedded"
         :reset-tab-on-entity-change="props.resetTabOnEntityChange"
         :reset-tab-on-profile-change="props.resetTabOnProfileChange"
+        :enable-url-markup="props.enableUrlMarkup"
         @ready="props.onReady"
         @error="props.onError"
         @save:crate="props.onSaveCrate"
