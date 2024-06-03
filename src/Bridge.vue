@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {
     reactive,
-    ref
 } from "vue";
 import {DescriboCrateBuilderProps} from "./types";
 
@@ -24,6 +23,7 @@ const props: DescriboCrateBuilderProps = reactive( {
     resetTabOnEntityChange: false,
     resetTabOnProfileChange: false,
     enableUrlMarkup: true,
+    enableEntityTimestamps: false,
     //mode: "embedded", // either "embedded" or "online"
     // webComponent: false, // a boolean
 })
@@ -64,6 +64,7 @@ defineExpose({
         :reset-tab-on-entity-change="props.resetTabOnEntityChange"
         :reset-tab-on-profile-change="props.resetTabOnProfileChange"
         :enable-url-markup="props.enableUrlMarkup"
+        :enable-entity-timestamps="props.enableEntityTimestamps"
         @ready="props.onReady"
         @error="props.onError"
         @save:crate="props.onSaveCrate"

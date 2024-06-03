@@ -98,4 +98,7 @@ export type DescriboCrateBuilderProps = {
 
   // If true text fields with an URL will be marked up with a link to the entity. If false, the URL will be shown as is.
   enableUrlMarkup?: boolean
+
+  // If true adds timestamp to reflect the last time the profile was updated. Defaults to false.
+  enableEntityTimestamps?: boolean
 }

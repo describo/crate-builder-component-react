@@ -103,6 +103,7 @@ CompleteExample.args = {
   resetTabOnEntityChange: true, // default by the vue component
   resetTabOnProfileChange: true, // default by the vue component
   enableUrlMarkup: true,  // default by the vue component
+  enableEntityTimestamps: false,  // default by the vue component
   onReady: () => console.log("onReady called"),
   onSaveCrate: (crateData) => console.log("onSaveCrate called: ", crateData),
   onNavigation: (navData) => console.log("onNavigation called: ", navData),
