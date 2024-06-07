@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import {
     reactive,
+    ref
 } from "vue";
 import {DescriboCrateBuilderProps} from "./types";
+
+let describo = ref();
 
 const props: DescriboCrateBuilderProps = reactive( {
     crate: {}, // an empty object, matching object | undefined
@@ -15,7 +18,7 @@ const props: DescriboCrateBuilderProps = reactive( {
     enableBrowseEntities: true, // a boolean
     enableTemplateSave: false, // a boolean
     enableInternalRouting: true, // a boolean
-    enableReverseLinkBrowser: true, // a boolean
+    enableReverseLinkBrowser: false, // a boolean
     purgeUnlinkedEntities: true, // a boolean
     tabLocation: "left", // one of "top", "bottom", "left", "right"
     showControls: true, // a boolean
@@ -34,6 +37,7 @@ function updateProps(newProps: DescriboCrateBuilderProps) {
             (props[key as keyof DescriboCrateBuilderProps] as any) = newProps[key as keyof DescriboCrateBuilderProps];
         }
     }
+    console.log("+++ updateProps", props)
 }
 
 defineExpose({
@@ -44,6 +48,7 @@ defineExpose({
 
 <template>
     <describo-crate-builder
+        ref="describo"
         :crate="props.crate"
         :profile="props.profile"
         :entity-id="props.entityId"
@@ -74,5 +79,7 @@ defineExpose({
     />
 <!--    entityId: {{props.entityId}}-->
 <!--    <hr/>-->
-<!--    Props in vue:<div>{{ JSON.stringify(props) }}</div>XXX-->
+<!--    <pre>-->
+<!--    Props in vue:<div>{{ JSON.stringify(props, null, 2) }}</div>XXX-->
+<!--    </pre>-->
 </template>
