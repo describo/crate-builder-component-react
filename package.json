@@ -34,6 +34,14 @@
     "build-storybook": "storybook build",
     "publish": "npm publish --access public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/describo/crate-builder-component-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/describo/crate-builder-component-react/issues"
+  },
+  "homepage": "https://github.com/describo/crate-builder-component-react#readme",
   "dependencies": {
     "@describo/crate-builder-component": "0.75.2",
     "@fortawesome/fontawesome-free": "^6.4.2",
