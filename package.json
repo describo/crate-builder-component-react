@@ -1,6 +1,6 @@
 {
   "name": "@describo/crate-builder-component-react",
-  "version": "0.75.2",
+  "version": "0.75.3",
   "description": "Describo Crate Builder in React",
   "author": "Balazs E. Pataki",
   "license": "MIT",
