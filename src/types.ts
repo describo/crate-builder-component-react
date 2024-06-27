@@ -1,3 +1,5 @@
+import {Ref} from "react";
+import {DescriboInternals} from "describo-internals";
 
 export interface JSONObject {
   [key: string]: any;
@@ -100,5 +102,9 @@ export type DescriboCrateBuilderProps = {
   enableUrlMarkup?: boolean
 
   // If true adds timestamp to reflect the last time the profile was updated. Defaults to false.
-  enableEntityTimestamps?: boolean
+  enableEntityTimestamps?: boolean,
+
+  // Optional ref to the crate builder Vue component internals, allowing direct access to the crate builder,
+  // profile manager, stc.
+  ref?: Ref<DescriboInternals>
 }

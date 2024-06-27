@@ -14,12 +14,21 @@ import profileCitation from "./examples/profile/citation.profile.json";
 import profileAroma from "./examples/profile/aroma.profile.json";
 import profileWithConstraints from "./examples/profile/profile-with-constraints.json";
 import {DescriboCrateBuilderProps} from "../types";
+import {useEffect, useRef} from "react";
+import {DescriboInternals} from "describo-internals";
 
 
 // Create a master template for mapping args to render the DescriboCrateBuilder component
 const Template: StoryFn<typeof DescriboCrateBuilder> = (args) => {
+  const describoRef = useRef<DescriboInternals>(null);
+  useEffect(() => {
+    setInterval(() => {
+      console.log("+++ testing ref in DescriboCrateBuilder.stories.tsx", describoRef.current!.cm.getEntityTypes());
+    }, 5000)
+  }, [])
+
   return <>
-    <DescriboCrateBuilder {...args} />
+    <DescriboCrateBuilder  ref={describoRef} {...args} />
   </>
 }
 

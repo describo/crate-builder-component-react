@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+import {forwardRef, useEffect, useRef, useState} from 'react';
 import {App, createApp} from "vue";
 import {ComponentPublicInstance} from "@vue/runtime-core";
 import {DescriboCrateBuilderProps} from "./types";
@@ -10,19 +10,39 @@ import DescriboCrateBuilderVue from "@describo/crate-builder-component";
 import './index.css'
 import "@describo/crate-builder-component/dist/vue/style.css";
 import "element-plus/dist/index.css";
+import {DescriboInternals} from "describo-internals";
 
-function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
+
+const DescriboCrateBuilder= forwardRef((props: DescriboCrateBuilderProps, ref) => {
   // The element we mount onto
   const containerRef = useRef(null);
 
   // Make sure we mount Bridge only once
   const mountedRef = useRef(false);
 
+  // Our internal ref to the DescriboInternals so that we can call its function.
+  // It works regardless whether the input ref is set or not
+  const internalRef = useRef<DescriboInternals>();
+
   // The app based on Bridge
   const [bridgeApp, setBridgeApp] = useState<App>()
 
   // The Bridge app instance mounted
   const [bridgeInstance, setBridgeInstance] = useState<ComponentPublicInstance>()
+
+  // Handle the ref forwarding conditionally. This functions allows capturing the ref's value if set from outside so
+  // that both the calling component and the DescriboCrateBuilder can access the same internals.
+  const setRef = (describo: DescriboInternals) => {
+    internalRef.current = describo;
+    // If ref is provided, update it as well
+    if (ref) {
+      if (typeof ref === 'function') {
+        ref(describo);
+      } else if (ref.current !== undefined) {
+        ref.current = describo;
+      }
+    }
+  }
 
   // Initialize Vue component bridge
   useEffect(() => {
@@ -51,8 +71,7 @@ function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
       const instance = app.mount(containerRef.current);
       // Force rerender with props set on the vue component
       setTimeout(() => {
-        console.log("+++ setTimeout");
-        (instance as any).updateProps(props);
+        (instance as any).updateProps({ref:setRef, ...props});
       }, 1)
       setBridgeInstance(instance)
 
@@ -70,9 +89,15 @@ function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
   // Sync vue component props with react props
   useEffect(() => {
     if (bridgeInstance) {
-      (bridgeInstance as any).updateProps(props)
+      (bridgeInstance as any).updateProps({ref:setRef, ...props})
     }
   }, [props])
+
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     console.log("+++ ref in DescriboCrateBuilder.tsx", internalRef.current!.cm.getEntityTypes());
+  //   }, 1000)
+  // }, [])
 
   // console.log("+++ Bridge", Bridge)
   // console.log("+++ bridgeApp", bridgeApp)
@@ -84,6 +109,6 @@ function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {
       {/*<hr/>*/}
       <div ref={containerRef}></div>
     </>)
-}
+})
 
 export default DescriboCrateBuilder

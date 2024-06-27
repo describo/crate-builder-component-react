@@ -5,7 +5,8 @@ import {
 } from "vue";
 import {DescriboCrateBuilderProps} from "./types";
 
-let describo = ref();
+// Create a ref to the exposed describo internals from Shell.component.vue
+let describoInternals = ref();
 
 const props: DescriboCrateBuilderProps = reactive( {
     crate: {}, // an empty object, matching object | undefined
@@ -37,7 +38,16 @@ function updateProps(newProps: DescriboCrateBuilderProps) {
             (props[key as keyof DescriboCrateBuilderProps] as any) = newProps[key as keyof DescriboCrateBuilderProps];
         }
     }
-    console.log("+++ updateProps", props)
+    // Take care of the ref. The ref is either a function or a ref object
+    const ref = props['ref']
+    if (typeof ref === 'function') {
+        ref(describoInternals.value);
+    } else if (ref.current !== undefined) {
+        ref.current = describoInternals.value;
+    }
+    // console.log("+++ updateProps2", props)
+    // console.log("+++ describo refX", describo)
+    // console.log("+++ props['ref'].current", props['ref'].current)
 }
 
 defineExpose({
@@ -48,7 +58,7 @@ defineExpose({
 
 <template>
     <describo-crate-builder
-        ref="describo"
+        ref="describoInternals"
         :crate="props.crate"
         :profile="props.profile"
         :entity-id="props.entityId"
