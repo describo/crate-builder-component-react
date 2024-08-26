@@ -54,7 +54,8 @@ export default defineConfig({
       "lodash",
       "@describo/crate-builder-component",
       "ajv", // Supress: The requested module '/node_modules/ajv/dist/ajv.js?v=09173956' does not provide an export named 'default'
-      "dayjs" // Supress: SyntaxError: The requested module '/node_modules/dayjs/dayjs.min.js?v=26ae2de4' does not provide an export named 'default' (at Date.component.vue:21:8)
+      "dayjs", // Supress: SyntaxError: The requested module '/node_modules/dayjs/dayjs.min.js?v=26ae2de4' does not provide an export named 'default' (at Date.component.vue:21:8)
+      'validator' // Superss: SyntaxError: The requested module '/node_modules/validator/index.js?v=ae63bf27' does not provide an export named 'isURL' (at VM4514 lib.ts:7:10)
     ],
   },
 
