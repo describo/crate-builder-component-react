@@ -6,9 +6,9 @@ import {createRouter, createWebHistory} from "vue-router";
 // @ts-ignore
 import Bridge from "./Bridge.vue";
 // @ts-ignore
-import DescriboCrateBuilderVue from "@describo/crate-builder-component";
+import DescriboCrateBuilderVue from "@arpproject/crate-builder-component";
 import './index.css'
-import "@describo/crate-builder-component/dist/vue/style.css";
+import "@arpproject/crate-builder-component/dist/vue/style.css";
 import "element-plus/dist/index.css";
 
 function DescriboCrateBuilder(props: DescriboCrateBuilderProps) {

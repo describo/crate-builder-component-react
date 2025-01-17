@@ -404,6 +404,54 @@
                     "multiple": true,
                     "numberType": ["Int", "Float", "Long"],
                     "type": ["Number"]
+                },
+                {
+                    "id": "https://my.org/selectWithCheck",
+                    "name": "selectWithCheck",
+                    "label": "Select with check",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["Select"],
+                    "style": "checkbox",
+                    "values": [
+                        "First",
+                        "Second",
+                        "Third",
+                        "Fourth",
+                        "Fifth"
+                    ]
+                },
+                {
+                    "id": "https://my.org/selectWithRadio",
+                    "name": "selectWithRadio",
+                    "label": "Select with radio",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["Select"],
+                    "style": "radio",
+                    "values": [
+                        "First",
+                        "Second",
+                        "Third",
+                        "Fourth",
+                        "Fifth"
+                    ]
+                },
+                {
+                    "id": "https://my.org/selectWithDropbox",
+                    "name": "selectWithDropbox",
+                    "label": "Select with dropdown",
+                    "required": true,
+                    "multiple": true,
+                    "type": ["Select"],
+                    "style": "dropdown",
+                    "values": [
+                        "First",
+                        "Second",
+                        "Third",
+                        "Fourth",
+                        "Fifth"
+                    ]
                 }
             ]
         }
